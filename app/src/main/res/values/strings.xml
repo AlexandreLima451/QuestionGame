@@ -1,0 +1,104 @@
+<resources>
+    <!--Tittle for application  [CHAR LIMIT=20]-->
+    <string name="app_name">Question</string>
+
+    <!--Tittle in the main screen [CHAR LIMIT=20]-->
+    <string name="game_title">Question!</string>
+
+    <!--Text present in button that starts the game  [CHAR LIMIT=20]-->
+    <string name="start_game">Let\'s play</string>
+
+    <!--Text present in button that shows the previous dialog  [CHAR LIMIT=20]-->
+    <string name="previous">Previous</string>
+
+    <!--Text present in button that shows the next dialog  [CHAR LIMIT=20]-->
+    <string name="next">Next</string>
+
+    <!--Text present in button that starts the match  [CHAR LIMIT=20]-->
+    <string name="lets_go">Lets\' Go</string>
+
+    <!--Text present in button that chooses yes [CHAR LIMIT=10]-->
+    <string name="option_yes">Yes</string>
+
+    <!--Text present in button that chooses no [CHAR LIMIT=10]-->
+    <string name="option_no">No</string>
+
+    <!--Text present in button that initiates another match [CHAR LIMIT=20]-->
+    <string name="option_reset">Try Again!</string>
+
+    <!-- Computer's Introduction - Part 1 [CHAR LIMIT=150]-->
+    <string name="intro_text_1">"Hi, human! I'm a very smart computer, and I have heard that you are smart too. So, I decided to challenge you for a game. ;)"</string>
+
+    <!-- Computer's Introduction - Part 2 [CHAR LIMIT=180]-->
+    <string name="intro_text_2">You\'ll have to think an animal according the list I\'ll show you, and then I\'ll make some questions. Based on your answers, I\'ll figure out which animal you chose. He he</string>
+
+    <!-- Computer's Introduction - Part 3 [CHAR LIMIT=70]-->
+    <string name="intro_text_3">Sounds easy, don\'t you think? Now, check the following list:</string>
+
+    <!-- Computer's Introduction - Part 4 [CHAR LIMIT=255]-->
+    <string name="intro_text_4">"A Lion, a horse, a human (you, I suppose), a monkey (someone like you, I guess), a bat, a whale, an ostrich, a penguin, a duck (my favorite), an eagle, a turtle, a crocodile and, last but not least, a snake (something like S)!"</string>
+
+    <!-- Computer's Introduction - Part 5 [CHAR LIMIT=25]-->
+    <string name="intro_text_5">"Are you ready?"</string>
+
+    <!-- Text of the first question [CHAR LIMIT=50]-->
+    <string name="question_1">"The animal is mammal?"</string>
+
+    <!-- Text of the second question [CHAR LIMIT=50]-->
+    <string name="question_2">"The animal is quadruped?"</string>
+
+    <!-- Text of the third question [CHAR LIMIT=50]-->
+    <string name="question_3">"The animal is carnivore?"</string>
+
+    <!-- Text of the fourth question [CHAR LIMIT=50]-->
+    <string name="question_4">"The animal is herbivore?"</string>
+
+    <!-- Text of the fifth question [CHAR LIMIT=50]-->
+    <string name="question_5">"This one is hard… it has fins?"</string>
+
+    <!-- Text of the sixth question [CHAR LIMIT=50]-->
+    <string name="question_6">"Come on! Let me see… it can fly ?"</string>
+
+    <!-- Text when the animal is a lion [CHAR LIMIT=150]-->
+    <string name="answer_lion">"You thought a Lion!"</string>
+
+    <!-- Text when the animal is a horse [CHAR LIMIT=150]-->
+    <string name="answer_horse">"You thought a Horse!"</string>
+
+    <!-- Text when the animal is a human [CHAR LIMIT=150]-->
+    <string name="answer_human">"You thought a Human… you aren't creative at all. He he"</string>
+
+    <!-- Text when the animal is a monkey [CHAR LIMIT=150]-->
+    <string name="answer_monkey">"You thought a Monkey! Hey… you didn't confuse yourself, right? He he"</string>
+
+    <!-- Text when the animal is a bat [CHAR LIMIT=150]-->
+    <string name="answer_bat">"You thought The Batman! I'm kidding… it's just a bat."</string>
+
+    <!-- Text when the animal is a whale [CHAR LIMIT=150]-->
+    <string name="answer_whale">"You thought a Whale!"</string>
+
+    <!-- Text when the animal is an ostrich [CHAR LIMIT=150]-->
+    <string name="answer_ostrich">"You thought an Ostrich!"</string>
+
+    <!-- Text when the animal is a penguin [CHAR LIMIT=150]-->
+    <string name="answer_penguin">"You thought a Penguin!"</string>
+
+    <!-- Text when the animal is a duck [CHAR LIMIT=150]-->
+    <string name="answer_duck">"You thought a Duck! Qua Qua! (:v"</string>
+
+    <!-- Text when the animal is an eagle [CHAR LIMIT=150]-->
+    <string name="answer_eagle">"You thought an Eagle!"</string>
+
+    <!-- Text when the animal is a turtle [CHAR LIMIT=150]-->
+    <string name="answer_turtle">"You thought a Turtle!"</string>
+
+    <!-- Text when the animal is a crocodile [CHAR LIMIT=50]-->
+    <string name="answer_crocodile">"You thought a Crocodile!"</string>
+
+    <!-- Text when the animal is a snake [CHAR LIMIT=150]-->
+    <string name="answer_snake">"You thought a Snake!"</string>
+
+    <!-- Text when the player didn't choose any animal [CHAR LIMIT=150]-->
+    <string name="answer_no_one">"Well, don't get me wrong… but I believe that you didn't think nothing! You just trick me! >8¬("</string>
+
+</resources>

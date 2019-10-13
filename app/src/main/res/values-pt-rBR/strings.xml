@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Titulo do aplicativo  [CHAR LIMIT=20]-->
+    <string name="app_name">Question</string>
+
+    <!--Titulo da tela principal [CHAR LIMIT=20]-->
+    <string name="game_title">Question!</string>
+
+    <!--Texto presente no botao que inicia o jogo [CHAR LIMIT=20]-->
+    <string name="start_game">Vamos Jogar!</string>
+
+    <!--Texto presente no botao que exibe dialogo anterior [CHAR LIMIT=20]-->
+    <string name="previous">Anterior</string>
+
+    <!--Texto presente no botao que exibe proximo dialogo [CHAR LIMIT=20]-->
+    <string name="next">Próximo</string>
+
+    <!--Texto presente no botao que inicia a partida [CHAR LIMIT=20]-->
+    <string name="lets_go">Vamos lá!</string>
+
+    <!--Texto presente no botao que escolhe sim [CHAR LIMIT=10]-->
+    <string name="option_yes">Sim</string>
+
+    <!--Texto presente no botao que escolhe nao [CHAR LIMIT=10]-->
+    <string name="option_no">Não</string>
+
+    <!--Texto presente no botao que inicia outra partida [CHAR LIMIT=20]-->
+    <string name="option_reset">Recomeçar</string>
+
+    <!-- Introducao da Maquina - Parte 1 [CHAR LIMIT=150]-->
+    <string name="intro_text_1">Olá, humano! Eu sou um computador muito inteligente, e fiquei sabendo que você também é. Então, eu decidi desafiá-lo para um jogo!</string>
+
+    <!-- Introducao da Maquina - Parte 2 [CHAR LIMIT=180]-->
+    <string name="intro_text_2">Você terá de pensar em um animal de acordo com a lista que mostrarei para você, e então eu farei algumas perguntas. Em cima de suas respostas, eu descobrirei que animal você escolheu. He he</string>
+
+    <!-- Introducao da Maquina - Parte 3 [CHAR LIMIT=70]-->
+    <string name="intro_text_3">Parece fácil, não acha? Agora, confira a lista a seguir</string>
+
+    <!-- Introducao da Maquina - Parte 4 [CHAR LIMIT=255]-->
+    <string name="intro_text_4">Um leão, um cavalo, um humano (você, eu suponho), um macaco (alguém como você, imagino), um morcego, uma baleia, um avestruz, um pinguim, um pato (meu favorito), uma águia, um crocodilo e, por último, mas não menos importante, uma cobra (algo como assim S)</string>
+
+    <!-- Introducao da Maquina - Parte 5 [CHAR LIMIT=25]-->
+    <string name="intro_text_5">Você está preparado?</string>
+
+    <!-- Texto da primeira questao [CHAR LIMIT=50]-->
+    <string name="question_1">O animal é um mamífero?</string>
+
+    <!-- Texto da segunda questao [CHAR LIMIT=50]-->
+    <string name="question_2">O animal é um quadrúpede?</string>
+
+    <!-- Texto da terceira questao [CHAR LIMIT=50]-->
+    <string name="question_3">O animal é um carnívero?</string>
+
+    <!-- Texto da quarta questao [CHAR LIMIT=50]-->
+    <string name="question_4">O animal é um herbívoro?</string>
+
+    <!-- Texto da quinta questao [CHAR LIMIT=50]-->
+    <string name="question_5">Essa está difícil… tem nadadeiras?</string>
+
+    <!-- Texto da sexta questao [CHAR LIMIT=50]-->
+    <string name="question_6">Vamos lá! Deixe eu pensar… ele voa?</string>
+
+    <!-- Texto quando o animal é um leão [CHAR LIMIT=150]-->
+    <string name="answer_lion">Você pensou num leão!</string>
+
+    <!-- Texto quando o animal é um cavalo [CHAR LIMIT=150]-->
+    <string name="answer_horse">Você pensou num cavalo!</string>
+
+    <!-- Texto quando o jogador pensou nele mesmo [CHAR LIMIT=150]-->
+    <string name="answer_human">Você pensou num humano… você não é tão criativo. hehe</string>
+
+    <!-- Texto quando o animal é um macaco [CHAR LIMIT=150]-->
+    <string name="answer_monkey">Você pensou num macaco! Ei… você não se confundiu, certo? hehe</string>
+
+    <!-- Texto quando o animal é um morcego [CHAR LIMIT=150]-->
+    <string name="answer_bat">Você pensou no Batman! Estou brincando… é apenas um morcego.</string>
+
+    <!-- Texto quando o animal é uma baleia [CHAR LIMIT=150]-->
+    <string name="answer_whale">Você pensou numa baleia!</string>
+
+    <!-- Texto quando o animal é um avestruz [CHAR LIMIT=150]-->
+    <string name="answer_ostrich">Você pensou num avestruz!</string>
+
+    <!-- Texto quando o animal é um pinguim [CHAR LIMIT=150]-->
+    <string name="answer_penguin">Você pensou num pinguim!</string>
+
+    <!-- Texto quando o animal é um pato [CHAR LIMIT=150]-->
+    <string name="answer_duck">Você pensou num pato! Qua Qua! (:v</string>
+
+    <!-- Texto quando o animal é uma águia [CHAR LIMIT=150]-->
+    <string name="answer_eagle">Você pensou numa águia!</string>
+
+    <!-- Texto quando o animal é uma tartaruga [CHAR LIMIT=150]-->
+    <string name="answer_turtle">Você pensou numa tartaruga!</string>
+
+    <!-- Texto quando o animal é um crocodilo [CHAR LIMIT=150]-->
+    <string name="answer_crocodile">Você pensou num crocodilo!</string>
+
+    <!-- Texto quando o animal é uma cobra [CHAR LIMIT=150]-->
+    <string name="answer_snake">Você pensou numa cobra!</string>
+
+    <!-- Texto quando o jogador escolheu nenhum animal [CHAR LIMIT=150]-->
+    <string name="answer_no_one">Bem, não me entenda mal… mas eu acredito que você não pensou em nada! Está apenas trapaceando! >8¬(</string>
+
+</resources>
