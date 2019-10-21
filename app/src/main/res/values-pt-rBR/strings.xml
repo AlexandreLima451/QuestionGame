@@ -43,22 +43,22 @@
     <string name="intro_text_5">Você está preparado?</string>
 
     <!-- Texto da primeira questao [CHAR LIMIT=50]-->
-    <string name="question_1">O animal é um mamífero?</string>
+    <string name="question_mammal">O animal é um mamífero?</string>
 
     <!-- Texto da segunda questao [CHAR LIMIT=50]-->
-    <string name="question_2">O animal é um quadrúpede?</string>
+    <string name="question_quadruped">O animal é um quadrúpede?</string>
 
     <!-- Texto da terceira questao [CHAR LIMIT=50]-->
-    <string name="question_3">O animal é um carnívero?</string>
+    <string name="question_carnivore">O animal é um carnívero?</string>
 
     <!-- Texto da quarta questao [CHAR LIMIT=50]-->
-    <string name="question_4">O animal é um herbívoro?</string>
+    <string name="question_herbivore">O animal é um herbívoro?</string>
 
     <!-- Texto da quinta questao [CHAR LIMIT=50]-->
-    <string name="question_5">Essa está difícil… tem nadadeiras?</string>
+    <string name="question_flying">Essa está difícil… tem nadadeiras?</string>
 
     <!-- Texto da sexta questao [CHAR LIMIT=50]-->
-    <string name="question_6">Vamos lá! Deixe eu pensar… ele voa?</string>
+    <string name="question_fins">Vamos lá! Deixe eu pensar… ele voa?</string>
 
     <!-- Texto quando o animal é um leão [CHAR LIMIT=150]-->
     <string name="answer_lion">Você pensou num leão!</string>
@@ -100,6 +100,6 @@
     <string name="answer_snake">Você pensou numa cobra!</string>
 
     <!-- Texto quando o jogador escolheu nenhum animal [CHAR LIMIT=150]-->
-    <string name="answer_no_one">Bem, não me entenda mal… mas eu acredito que você não pensou em nada! Está apenas trapaceando! >8¬(</string>
+    <string name="answer_none">Bem, não me entenda mal… mas eu acredito que você não pensou em nada! Está apenas trapaceando! >8¬(</string>
 
 </resources>

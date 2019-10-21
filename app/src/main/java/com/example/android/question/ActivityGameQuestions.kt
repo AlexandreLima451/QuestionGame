@@ -37,7 +37,8 @@ class ActivityGameQuestions : AppCompatActivity() {
     }
 
     /**
-     * This method loads the questions
+     * This method loads the questions or the answer, if the match finished
+     * @return the question or answer
      */
     fun loadQuestion() : String {
         if(questionNumber == 4) {
@@ -62,12 +63,12 @@ class ActivityGameQuestions : AppCompatActivity() {
         }
 
         when (questionNumber) {
-            1 -> return resources.getString(R.string.question_1)
-            2 -> return resources.getString(R.string.question_2)
-            3 -> return resources.getString(R.string.question_3)
-            4 -> return resources.getString(R.string.question_4)
-            5 -> return resources.getString(R.string.question_5)
-            6 -> return resources.getString(R.string.question_6)
+            1 -> return resources.getString(R.string.question_mammal)
+            2 -> return resources.getString(R.string.question_quadruped)
+            3 -> return resources.getString(R.string.question_carnivore)
+            4 -> return resources.getString(R.string.question_herbivore)
+            5 -> return resources.getString(R.string.question_flying)
+            6 -> return resources.getString(R.string.question_fins)
             else -> {
                 return "null"
             }
@@ -92,6 +93,7 @@ class ActivityGameQuestions : AppCompatActivity() {
 
     /**
      * This method validates the final answer
+     * @return true if the answers corresponds with any result
      */
     private fun checkResult() : Boolean{
         for ((value) in mapResults) {
@@ -103,6 +105,7 @@ class ActivityGameQuestions : AppCompatActivity() {
     /**
      * This method shows the result according the answers
      * @param result of the match
+     * @return the message (result)
      */
     private fun showAnswer(result : String) : String{
         var answerText : String = "";
@@ -120,7 +123,7 @@ class ActivityGameQuestions : AppCompatActivity() {
             mapResults["BAT"] -> answerText = resources.getString(R.string.answer_bat)
             mapResults["MONKEY"] -> answerText = resources.getString(R.string.answer_monkey)
             else -> {
-                answerText = resources.getString(R.string.answer_no_one)
+                answerText = resources.getString(R.string.answer_none)
             }
         }
 

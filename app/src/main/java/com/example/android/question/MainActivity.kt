@@ -1,5 +1,5 @@
 /***
- * Question Game!
+ * QuestionModel Game!
  *
  * App developed by
  * @author Alexandre Lima
@@ -8,7 +8,8 @@
  * the player to guess which animal he or she thought. I decided to remake this game here to put in
  * practice the lessons that I learned about Android App Development. I hope you enjoy it!
  *
- * 2012-2019
+ * @since 20/10/2019
+ *
  */
 
 package com.example.android.question
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
      * This method starts the game
      * */
     fun startGame(view : View){
-        var intent = Intent(applicationContext, ActivityGameIntro::class.java)
+        val intent = Intent(applicationContext, ActivityGameIntro::class.java)
         startActivity(intent)
     }
 }
