@@ -1,5 +1,7 @@
 package com.example.android.question.model
 
+import com.example.android.question.R
+import com.example.android.question.util.MainApplication
 import java.util.*
 
 /**
@@ -28,16 +30,34 @@ class Match {
      * This method tries to figure out which animal was chosen
      * @return true if it found a correct result
      * */
-    fun checkResult() : Boolean{
-        if (questions.isEmpty()){
-            results.forEach {
-                if(finalResult.animal.equals (it.value.animal)){
-                    finalResult = it.value
-                    return true
-                }
+    fun checkResult(answer: Boolean) : Boolean{
+        return compareResult(currentQuestion.title, answer)
+    }
+
+    private fun compareResult(characteristic : String, answer: Boolean) : Boolean{
+        val newResults = results.filter {
+            when(characteristic){
+                "mammal" -> it.value.animal.isMammal == answer
+                "quadruped" -> it.value.animal.isQuadruped == answer
+                "carnivore" -> it.value.animal.isCarnivore == answer
+                "herbivore" -> it.value.animal.isHerbivore == answer
+                "flying" -> it.value.animal.isFlying == answer
+                "fins" -> it.value.animal.hasFins == answer
+                else -> return false
             }
         }
-        return false
+
+        results = newResults.toMutableMap()
+
+        return if (newResults.size != 1){
+            false
+        }else{
+            newResults.forEach {
+                finalResult = it.value
+
+            }
+            true
+        }
     }
 
     /**
@@ -45,6 +65,8 @@ class Match {
      * @return result's message
      * */
     fun finish() : String{
+        if (finalResult.animal.breed == "none"){ finalResult = ResultModel(Results.none,
+                MainApplication.applicationContext().resources.getString(R.string.answer_none)) }
         val finalText = finalResult.resultText
         questions.clear()
         results.clear()
@@ -70,7 +92,7 @@ class Match {
                 return false
             }
         }
-        val questMap = questions.getRandomly()
+        val questMap = getRandomly()
         currentQuestion.title = questMap.value.title
         currentQuestion.text = questMap.value.text
 
@@ -93,9 +115,8 @@ class Match {
         }
     }
 
-    fun Map<String, QuestionModel>.getRandomly() : MutableMap.MutableEntry <String, QuestionModel> {
+    private fun getRandomly(): MutableMap.MutableEntry <String, QuestionModel> {
         val random = Random()
-        val questionMap = questions.entries.elementAt(random.nextInt(questions.size))
-        return questionMap
+        return questions.entries.elementAt(random.nextInt(questions.size))
     }
 }

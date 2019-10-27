@@ -1,16 +1,16 @@
 package com.example.android.question.model
 
-class Animal (var breed : String?,
-              var isMammal : Boolean,
-              var isQuadruped : Boolean,
-              var isCarnivore : Boolean,
-              var isHerbivore : Boolean,
-              var isFlying : Boolean,
-              var hasFins : Boolean){
+open class Animal (var breed : String?,
+                   var isMammal : Boolean,
+                   var isQuadruped : Boolean,
+                   var isCarnivore : Boolean,
+                   var isHerbivore : Boolean,
+                   var isFlying : Boolean,
+                   var hasFins : Boolean){
 
-    var imgPixelArt : String? = null
+    override operator fun equals(other: Any?): Boolean {
+        val anotherAnimal = other as Animal
 
-    fun equals(anotherAnimal : Animal) : Boolean{
         if(this.isMammal != anotherAnimal.isMammal){ return false }
         if(this.isQuadruped != anotherAnimal.isQuadruped){ return false }
         if(this.isCarnivore != anotherAnimal.isCarnivore){ return false }
@@ -19,5 +19,16 @@ class Animal (var breed : String?,
         if(this.hasFins != anotherAnimal.hasFins){ return false }
 
         return true
+    }
+
+    override fun hashCode(): Int {
+        var result = breed?.hashCode() ?: 0
+        result = 31 * result + isMammal.hashCode()
+        result = 31 * result + isQuadruped.hashCode()
+        result = 31 * result + isCarnivore.hashCode()
+        result = 31 * result + isHerbivore.hashCode()
+        result = 31 * result + isFlying.hashCode()
+        result = 31 * result + hasFins.hashCode()
+        return result
     }
 }

@@ -32,6 +32,8 @@ abstract class Results {
                 isHerbivore = true, isFlying = false, hasFins = false)
         val snake = Animal(breed = "snake", isMammal = false, isQuadruped = false, isCarnivore = true,
                 isHerbivore = false, isFlying = false, hasFins = false)
+        val eagle = Animal(breed = "eagle", isMammal = false, isQuadruped = false, isCarnivore = true,
+                isHerbivore = false, isFlying = true, hasFins = false)
         val none = Animal(breed = "none", isMammal = false, isQuadruped = false, isCarnivore = false,
                 isHerbivore = false, isFlying = false, hasFins = false)
 
@@ -49,7 +51,7 @@ abstract class Results {
                     "BAT"    to ResultModel(bat, MainApplication.applicationContext().resources.getString(R.string.answer_bat)),
                     "MONKEY"    to ResultModel(monkey, MainApplication.applicationContext().resources.getString(R.string.answer_monkey)),
                     "SNAKE"    to ResultModel(snake, MainApplication.applicationContext().resources.getString(R.string.answer_snake)),
-                    "NONE"     to ResultModel(none, MainApplication.applicationContext().resources.getString(R.string.answer_none))
+                    "EAGLE"    to ResultModel(eagle, MainApplication.applicationContext().resources.getString(R.string.answer_eagle))
             )
 
             return list
