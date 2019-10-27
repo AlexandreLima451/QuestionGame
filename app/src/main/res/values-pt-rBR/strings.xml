@@ -55,10 +55,10 @@
     <string name="question_herbivore">O animal é um herbívoro?</string>
 
     <!-- Texto da quinta questao [CHAR LIMIT=50]-->
-    <string name="question_flying">Essa está difícil… tem nadadeiras?</string>
+    <string name="question_fins">Essa está difícil… tem nadadeiras?</string>
 
     <!-- Texto da sexta questao [CHAR LIMIT=50]-->
-    <string name="question_fins">Vamos lá! Deixe eu pensar… ele voa?</string>
+    <string name="question_flying">Vamos lá! Deixe eu pensar… ele voa?</string>
 
     <!-- Texto quando o animal é um leão [CHAR LIMIT=150]-->
     <string name="answer_lion">Você pensou num leão!</string>

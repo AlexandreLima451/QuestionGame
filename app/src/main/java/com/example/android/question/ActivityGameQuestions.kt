@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_game_questions.*
+import com.example.android.question.model.Match;
 
 /**
  * This class handles with the game's logic
@@ -11,133 +12,57 @@ import kotlinx.android.synthetic.main.activity_game_questions.*
 
 class ActivityGameQuestions : AppCompatActivity() {
 
-    var questionText : String = ""
-    var questionNumber : Int = 1
-    var score : String = ""
-
-    //KEY is result and VALUE is the answers, being Y equal yes and N equals no
-    val mapResults = mapOf("LION" to "YYYN",
-                           "HORSE" to "YYNY",
-                           "OSTRICH" to "NNYY",
-                           "PENGUIN" to "NNYN",
-                           "DUCK" to "NNNY",
-                           "TURTLE" to "NYYY",
-                           "CROCODILE" to "NYYN",
-                           "WHALE" to "YNYYY",
-                           "HUMAN" to "YNYYN",
-                           "BAT" to "YYYYY",
-                           "MONKTEY" to "YYYYN" )
+    var match = Match()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_questions)
 
-        questionNumber = 0
-        txt_dialog.text = loadQuestion()
+        match.init()
+        showQuestion()
     }
 
-    /**
-     * This method loads the questions or the answer, if the match finished
-     * @return the question or answer
-     */
-    fun loadQuestion() : String {
-        if(questionNumber == 4) {
-            if (checkResult()) {
-                finishGame()
-                return showAnswer(score)
-            } else {
-                if (score == "YNYY") {
-                    questionNumber += 1
-                }else if (score == "YYYY") {
-                    questionNumber += 2
-                } else {
-                    finishGame()
-                    return showAnswer(score)
-                }
-            }
-        } else if(questionNumber >= 5) {
-          finishGame()
-          return showAnswer(score)
-        }else{
-            questionNumber += 1
-        }
-
-        when (questionNumber) {
-            1 -> return resources.getString(R.string.question_mammal)
-            2 -> return resources.getString(R.string.question_quadruped)
-            3 -> return resources.getString(R.string.question_carnivore)
-            4 -> return resources.getString(R.string.question_herbivore)
-            5 -> return resources.getString(R.string.question_flying)
-            6 -> return resources.getString(R.string.question_fins)
-            else -> {
-                return "null"
-            }
-        }
+    fun showQuestion(){
+        txt_dialog.text = match.currentQuestion.text
     }
 
     /**
      * This method sets the answer "yes" and loads a new question
      */
     fun clickYes(view : View){
-        score += "Y"
-        txt_dialog.text = loadQuestion()
+        match.setAnswer(true)
+        if(match.checkResult()){
+            finishGame()
+        }else{
+            if(match.loadQuestion()){
+                showQuestion()
+            }else{
+                finishGame()
+            }
+        }
     }
 
     /**
      * This method sets the answer "no" and loads a new question
      */
     fun clickNo(view : View){
-        score += "N"
-        txt_dialog.text = loadQuestion()
-    }
-
-    /**
-     * This method validates the final answer
-     * @return true if the answers corresponds with any result
-     */
-    private fun checkResult() : Boolean{
-        for ((value) in mapResults) {
-            if(score == value) return true
-        }
-        return false
-    }
-
-    /**
-     * This method shows the result according the answers
-     * @param result of the match
-     * @return the message (result)
-     */
-    private fun showAnswer(result : String) : String{
-        var answerText : String = "";
-
-        when(result){
-            mapResults["LION"] -> answerText = resources.getString(R.string.answer_lion)
-            mapResults["HORSE"] -> answerText = resources.getString(R.string.answer_horse)
-            mapResults["OSTRICH"] -> answerText = resources.getString(R.string.answer_ostrich)
-            mapResults["PENGUIN"] -> answerText = resources.getString(R.string.answer_penguin)
-            mapResults["DUCK"] -> answerText = resources.getString(R.string.answer_duck)
-            mapResults["TURTLE"] -> answerText = resources.getString(R.string.answer_turtle)
-            mapResults["CROCODILE"] -> answerText = resources.getString(R.string.answer_crocodile)
-            mapResults["WHALE"] -> answerText = resources.getString(R.string.answer_whale)
-            mapResults["HUMAN"] -> answerText = resources.getString(R.string.answer_human)
-            mapResults["BAT"] -> answerText = resources.getString(R.string.answer_bat)
-            mapResults["MONKEY"] -> answerText = resources.getString(R.string.answer_monkey)
-            else -> {
-                answerText = resources.getString(R.string.answer_none)
+        match.setAnswer(false)
+        if(match.checkResult()){
+            finishGame()
+        }else{
+            if(match.loadQuestion()){
+                showQuestion()
+            }else{
+                finishGame()
             }
         }
-
-        return answerText
     }
 
     /**
      * This method finishes the game
      */
     private fun finishGame(){
-        var result : String = ""
-        result = showAnswer(score)
-
-        txt_dialog.text = result
+        txt_dialog.text = match.finish()
 
         btn_yes.visibility = View.INVISIBLE
         btn_no.visibility = View.INVISIBLE
@@ -152,9 +77,7 @@ class ActivityGameQuestions : AppCompatActivity() {
         btn_no.visibility = View.VISIBLE
         btn_reset.visibility = View.INVISIBLE
 
-        questionText = ""
-        questionNumber = 0
-        score = ""
-        txt_dialog.text = loadQuestion()
+        match.reset()
+        showQuestion()
     }
 }

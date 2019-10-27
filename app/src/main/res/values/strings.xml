@@ -54,10 +54,10 @@
     <string name="question_herbivore">"The animal is herbivore?"</string>
 
     <!-- Text of the fifth question [CHAR LIMIT=50]-->
-    <string name="question_flying">"This one is hard… it has fins?"</string>
+    <string name="question_fins">"This one is hard… it has fins?"</string>
 
     <!-- Text of the sixth question [CHAR LIMIT=50]-->
-    <string name="question_fins">"Come on! Let me see… it can fly ?"</string>
+    <string name="question_flying">"Come on! Let me see… it can fly ?"</string>
 
     <!-- Text when the animal is a lion [CHAR LIMIT=150]-->
     <string name="answer_lion">"You thought a Lion!"</string>

@@ -2,6 +2,7 @@ package com.example.android.question.model
 
 import android.content.res.Resources
 import com.example.android.question.R
+import com.example.android.question.util.MainApplication
 
 abstract class Results {
 
@@ -34,23 +35,23 @@ abstract class Results {
         val none = Animal(breed = "none", isMammal = false, isQuadruped = false, isCarnivore = false,
                 isHerbivore = false, isFlying = false, hasFins = false)
 
-        val list = mutableMapOf<String, ResultModel>(
-                "LION"    to ResultModel(lion, Resources.getSystem().getString(R.string.answer_lion)),
-                "HORSE"    to ResultModel(horse, Resources.getSystem().getString(R.string.answer_horse)),
-                "OSTRICH"    to ResultModel(ostrich, Resources.getSystem().getString(R.string.answer_ostrich)),
-                "PENGUIN"    to ResultModel(penguin, Resources.getSystem().getString(R.string.answer_penguin)),
-                "DUCK"    to ResultModel(duck, Resources.getSystem().getString(R.string.answer_duck)),
-                "TURTLE"    to ResultModel(turtle, Resources.getSystem().getString(R.string.answer_turtle)),
-                "CROCODILE"    to ResultModel(crocodile, Resources.getSystem().getString(R.string.answer_crocodile)),
-                "WHALE"    to ResultModel(whale, Resources.getSystem().getString(R.string.answer_whale)),
-                "HUMAN"    to ResultModel(human, Resources.getSystem().getString(R.string.answer_human)),
-                "BAT"    to ResultModel(bat, Resources.getSystem().getString(R.string.answer_bat)),
-                "MONKEY"    to ResultModel(monkey, Resources.getSystem().getString(R.string.answer_monkey)),
-                "SNAKE"    to ResultModel(snake, Resources.getSystem().getString(R.string.answer_snake)),
-                "NONE"    to ResultModel(none, Resources.getSystem().getString(R.string.answer_none))
-        )
-
         fun newInstance() : MutableMap<String, ResultModel>{
+            val list = mutableMapOf<String, ResultModel>(
+                    "LION"    to ResultModel(lion, MainApplication.applicationContext().resources.getString(R.string.answer_lion)),
+                    "HORSE"    to ResultModel(horse, MainApplication.applicationContext().resources.getString(R.string.answer_horse)),
+                    "OSTRICH"    to ResultModel(ostrich, MainApplication.applicationContext().resources.getString(R.string.answer_ostrich)),
+                    "PENGUIN"    to ResultModel(penguin, MainApplication.applicationContext().resources.getString(R.string.answer_penguin)),
+                    "DUCK"    to ResultModel(duck, MainApplication.applicationContext().resources.getString(R.string.answer_duck)),
+                    "TURTLE"    to ResultModel(turtle, MainApplication.applicationContext().resources.getString(R.string.answer_turtle)),
+                    "CROCODILE"    to ResultModel(crocodile, MainApplication.applicationContext().resources.getString(R.string.answer_crocodile)),
+                    "WHALE"    to ResultModel(whale, MainApplication.applicationContext().resources.getString(R.string.answer_whale)),
+                    "HUMAN"    to ResultModel(human, MainApplication.applicationContext().resources.getString(R.string.answer_human)),
+                    "BAT"    to ResultModel(bat, MainApplication.applicationContext().resources.getString(R.string.answer_bat)),
+                    "MONKEY"    to ResultModel(monkey, MainApplication.applicationContext().resources.getString(R.string.answer_monkey)),
+                    "SNAKE"    to ResultModel(snake, MainApplication.applicationContext().resources.getString(R.string.answer_snake)),
+                    "NONE"     to ResultModel(none, MainApplication.applicationContext().resources.getString(R.string.answer_none))
+            )
+
             return list
         }
     }

@@ -8,31 +8,33 @@ import java.util.*
 class Match {
 
     var currentQuestion = Questions.noQuestion
-    var currentAnswer = false
-    var questions : MutableMap<String, QuestionModel> = hashMapOf()
-    var results : MutableMap<String, ResultModel> = hashMapOf()
-    var finalResult = ResultModel(Results.none, "")
+    private var currentAnswer = false
+    private var questions : MutableMap<String, QuestionModel> = hashMapOf()
+    private var results : MutableMap<String, ResultModel> = hashMapOf()
+    private var finalResult = ResultModel(Results.none, "")
 
     /**
      * This method initializes the match
      * */
     fun init(){
-        questions = Questions.newInstance()
+        questions = Questions.loadMainQuestions()
         results = Results.newInstance()
-        currentQuestion = Questions.noQuestion
+        loadQuestion()
         currentAnswer = false
+        finalResult = ResultModel(Results.none, "")
     }
 
     /**
-     * This method tries to figure out which animal was chose
+     * This method tries to figure out which animal was chosen
      * @return true if it found a correct result
      * */
     fun checkResult() : Boolean{
-        val results = Results.newInstance()
-        results.forEach {
-            if(finalResult.equals(it.value.animal)){
-                finalResult = it.value
-                return true
+        if (questions.isEmpty()){
+            results.forEach {
+                if(finalResult.animal.equals (it.value.animal)){
+                    finalResult = it.value
+                    return true
+                }
             }
         }
         return false
@@ -59,28 +61,33 @@ class Match {
     /**
      * This method loads a new question
      */
-    fun loadQuestion(){
-        if(questions.isEmpty()){
-            finish()
-        }else{
-            val questMap = questions.getRandomly()
-            currentQuestion.title = questMap.value.title
-            currentQuestion.text = questMap.value.text
-
-            questions.remove(questMap.key) // remove item to not repeat the question again
+    fun loadQuestion() : Boolean{
+        if(questions.isEmpty()) {
+            if (currentQuestion.title != "flying" && currentQuestion.title != "fins") {
+                questions = Questions.loadSecondaryQuestions()
+            } else {
+                finish()
+                return false
+            }
         }
+        val questMap = questions.getRandomly()
+        currentQuestion.title = questMap.value.title
+        currentQuestion.text = questMap.value.text
+
+        questions.remove(questMap.key) // remove item to not repeat the question again
+        return true
     }
 
     /**
      * This method sets the answer
-     * @param answer chose by the player
+     * @param answer chosen by the player
      * */
     fun setAnswer(answer : Boolean){
         when(currentQuestion.title){
             "mammal" -> finalResult.animal.isMammal = answer
             "quadruped" -> finalResult.animal.isQuadruped = answer
             "carnivore" -> finalResult.animal.isCarnivore = answer
-            "herbivore" -> finalResult.animal.isCarnivore = answer
+            "herbivore" -> finalResult.animal.isHerbivore = answer
             "flying" -> finalResult.animal.isFlying = answer
             "fins" -> finalResult.animal.hasFins = answer
         }
