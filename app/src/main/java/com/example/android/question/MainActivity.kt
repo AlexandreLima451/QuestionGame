@@ -17,19 +17,23 @@ package com.example.android.question
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import kotlinx.android.synthetic.main.activity_game_intro.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        btn_start_quiz.setOnClickListener{
+            startGame()
+        }
     }
 
     /**
      * This method starts the game
      * */
-    fun startGame(view : View){
+    private fun startGame(){
         val intent = Intent(applicationContext, ActivityGameIntro::class.java)
         startActivity(intent)
     }
