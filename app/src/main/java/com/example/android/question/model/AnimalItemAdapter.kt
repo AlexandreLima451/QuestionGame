@@ -27,9 +27,11 @@ class AnimalItemAdapter(context: Context?, resource: Int, animalItens: MutableLi
 
         val animalImageView = listItemView?.findViewById(R.id.animal_image) as ImageView
         val animalBreedTextView = listItemView.findViewById(R.id.animal_breed) as TextView
+        val animalDescriptionView = listItemView.findViewById(R.id.animal_description) as TextView
 
         animalImageView.setImageResource(currentAnimalItem.animalImage)
         animalBreedTextView.text = context.resources.getString(currentAnimalItem.animalBreed)
+        animalDescriptionView.text = context.resources.getString(currentAnimalItem.animalDescription)
 
         return listItemView
     }
