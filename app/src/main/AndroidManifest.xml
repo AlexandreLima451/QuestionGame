@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityGameIntro" />
+        <activity android:name=".ActivityGameIntroPart1" />
+        <activity android:name=".ActivityGameIntroPart2" />
         <activity android:name=".ActivityGameQuestions" />
         <activity android:name=".AnimalListActivity"/>
     </application>
