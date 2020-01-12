@@ -4,19 +4,19 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_game_intro.*
+import kotlinx.android.synthetic.main.activity_game_intro_part1.*
 
 /**
- * This class refers to the intro of the game
+ * This class refers to the intro of the game (part 1)
  */
-class ActivityGameIntro : AppCompatActivity() {
+class ActivityGameIntroPart1 : AppCompatActivity() {
 
     private var currentMessage : String = ""
     private var currentMsgCode : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_intro)
+        setContentView(R.layout.activity_game_intro_part1)
 
         btn_next.setOnClickListener {
             next()
@@ -27,7 +27,7 @@ class ActivityGameIntro : AppCompatActivity() {
         }
 
         btn_start_quiz.setOnClickListener {
-            startQuestions()
+            showAnimalList()
         }
 
         /**
@@ -48,19 +48,9 @@ class ActivityGameIntro : AppCompatActivity() {
             1 -> resources.getString(R.string.intro_text_1)
             2 -> resources.getString(R.string.intro_text_2)
             3 -> resources.getString(R.string.intro_text_3)
-            4 -> resources.getString(R.string.intro_text_4)
-            5 -> resources.getString(R.string.intro_text_5)
             else -> { // Note the block
                 " ? "
             }
-        }
-
-        if(currentMsgCode == 5){
-            btn_start_quiz.visibility = View.VISIBLE
-            btn_next.visibility = View.INVISIBLE
-        }else{
-            btn_start_quiz.visibility = View.INVISIBLE
-            btn_next.visibility = View.VISIBLE
         }
     }
 
@@ -77,16 +67,21 @@ class ActivityGameIntro : AppCompatActivity() {
      * This method loads the next message
      */
     fun next(){
-        currentMsgCode += 1
-        loadMessage()
-        intro_text.text = currentMessage
+        if(currentMsgCode == 3){
+           showAnimalList()
+        }else{
+            currentMsgCode += 1
+            loadMessage()
+            intro_text.text = currentMessage
+        }
     }
 
     /**
-     * This method starts a new match
+     * This method shows the animal list
      */
-    private fun startQuestions(){
-        val intent = Intent(this, ActivityGameQuestions::class.java)
+    private fun showAnimalList(){
+        val intent = Intent(this, ActivityGameIntroPart2::class.java)
         startActivity(intent)
+        finish()
     }
 }

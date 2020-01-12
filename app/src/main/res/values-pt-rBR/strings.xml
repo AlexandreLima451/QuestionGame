@@ -102,4 +102,93 @@
     <!-- Texto quando o jogador escolheu nenhum animal [CHAR LIMIT=150]-->
     <string name="answer_none">Bem, não me entenda mal… mas eu acredito que você não pensou em nada! Está apenas trapaceando! >8¬(</string>
 
+    <!-- Texto que mostra a raca do animal = Leao [CHAR LIMIT=50]-->
+    <string name="animal_lion">"Leão"</string>
+
+    <!-- Texto que mostra a raca do animal = Cavalo [CHAR LIMIT=50]-->
+    <string name="animal_horse">"Cavalo"</string>
+
+    <!-- Texto que mostra a raca do animal = Pinguim [CHAR LIMIT=50]-->
+    <string name="animal_penguin">"Pinguim"</string>
+
+    <!-- Texto que mostra a raca do animal = Pato [CHAR LIMIT=50]-->
+    <string name="animal_duck">"Pato"</string>
+
+    <!-- Texto que mostra a raca do animal = Tartaruga [CHAR LIMIT=50]-->
+    <string name="animal_turtle">"Tartaruga"</string>
+
+    <!-- Texto que mostra a raca do animal = Crocodilo [CHAR LIMIT=50]-->
+    <string name="animal_crocodile">"Crocodilo"</string>
+
+    <!-- Texto que mostra a raca do animal = Baleia [CHAR LIMIT=50]-->
+    <string name="animal_whale">"Baleia"</string>
+
+    <!-- Texto que mostra a raca do animal = Humano [CHAR LIMIT=50]-->
+    <string name="animal_human">"Humano"</string>
+
+    <!-- Texto que mostra a raca do animal = Morcego [CHAR LIMIT=50]-->
+    <string name="animal_bat">"Morcego"</string>
+
+    <!-- Texto que mostra a raca do animal = Macaco [CHAR LIMIT=50]-->
+    <string name="animal_monkey">"Macaco"</string>
+
+    <!-- Texto que mostra a raca do animal = Cobra [CHAR LIMIT=50]-->
+    <string name="animal_snake">"Cobra"</string>
+
+    <!-- Texto que mostra a raca do animal = Aguia [CHAR LIMIT=50]-->
+    <string name="animal_eagle">"Águia"</string>
+
+    <!-- Texto que mostra a descricao do animal = Leao [CHAR LIMIT=150]-->
+    <string name="lion_description">Ele tem muito cabelo!</string>
+
+    <!-- Texto que mostra a descricao do animal = Cavalo [CHAR LIMIT=150]-->
+    <string name="horse_description">Chique e poderoso, ele gosta de grama.</string>
+
+    <!-- Texto que mostra a descricao do animal = Pinguim [CHAR LIMIT=150]-->
+    <string name="penguin_description">Ele é um cavaleiro. Eu gosto de cavaleiros!</string>
+
+    <!-- Texto que mostra a descricao do animal = Pato [CHAR LIMIT=150]-->
+    <string name="duck_description">Meu favorito, ele é fofo e gosta de peixe.</string>
+
+    <!-- Texto que mostra a descricao do animal = Tartatuga [CHAR LIMIT=150]-->
+    <string name="turtle_description">Muito inteligente, como eu.</string>
+
+    <!-- Texto que mostra a descricao do animal = Crocodilo [CHAR LIMIT=150]-->
+    <string name="crocodile_description">Ele é bobo e nojento.</string>
+
+    <!-- Texto que mostra a descricao do animal = Baleia [CHAR LIMIT=150]-->
+    <string name="whale_description">O maior animal da lista, é tudo que consigo dizer.</string>
+
+    <!-- Texto que mostra a descricao do animal = Humano [CHAR LIMIT=150]-->
+    <string name="human_description">Você sabe mais do que eu.</string>
+
+    <!-- Texto que mostra a descricao do animal = Morcego [CHAR LIMIT=150]-->
+    <string name="bat_description">Ele voa como uma borboleta, mas não.</string>
+
+    <!-- Texto que mostra a descricao do animal = Macaco [CHAR LIMIT=150]-->
+    <string name="monkey_description">Ele pensa que é um humano, mas não conta para ele.</string>
+
+    <!-- Texto que mostra a descricao do animal = Cobra [CHAR LIMIT=150]-->
+    <string name="snake_description">Shua Shua Shua, disse a Cobra.</string>
+
+    <!-- Texto que mostra a descricao do animal = Aguia [CHAR LIMIT=150]-->
+    <string name="eagle_description">Rima com Haia</string>
+
+    <!-- Descricao do Jogador = O App Master [CHAR LIMIT=25]-->
+    <string name="player1_name">Euzinho</string>
+
+    <!-- Descricao do Jogador = O Usuario [CHAR LIMIT=25]-->
+    <string name="player2_name">Você</string>
+
+    <!-- Resposta do usuario quando ele/ela escolhe sim [CHAR LIMIT=20]-->
+    <string name="yes_answer">Sim!</string>
+
+    <!-- Resposta do usuario quando ele/ela escolhe nao [CHAR LIMIT=20]-->
+    <string name="no_answer">Não!</string>
+
+    <!-- A descricao do botao que leva para a lista de animais [CHAR LIMIT=50]-->
+    <string name="btn_img_animals_list">Lista de Animais</string>
+
+    <!-- O titulo da lista de animais [CHAR LIMIT=100]-->
+    <string name="animals_list_tittle">Vamos conferir nossos animais abaixo:</string>
 </resources>

@@ -101,4 +101,94 @@
     <!-- Text when the player didn't choose any animal [CHAR LIMIT=150]-->
     <string name="answer_none">"Well, don't get me wrong… but I believe that you didn't think nothing! You just trick me! >8¬("</string>
 
+    <!-- Text that shows the animal's breed = Lion [CHAR LIMIT=50]-->
+    <string name="animal_lion">"Lion"</string>
+
+    <!-- Text that shows the animal's breed = Horse [CHAR LIMIT=50]-->
+    <string name="animal_horse">"Horse"</string>
+
+    <!-- Text that shows the animal's breed = Penguin [CHAR LIMIT=50]-->
+    <string name="animal_penguin">"Penguin"</string>
+
+    <!-- Text that shows the animal's breed = Duck [CHAR LIMIT=50]-->
+    <string name="animal_duck">"Duck"</string>
+
+    <!-- Text that shows the animal's breed = Turtle [CHAR LIMIT=50]-->
+    <string name="animal_turtle">"Turtle"</string>
+
+    <!-- Text that shows the animal's breed = Crocodile [CHAR LIMIT=50]-->
+    <string name="animal_crocodile">"Crocodile"</string>
+
+    <!-- Text that shows the animal's breed = Whale [CHAR LIMIT=50]-->
+    <string name="animal_whale">"Whale"</string>
+
+    <!-- Text that shows the animal's breed = Human [CHAR LIMIT=50]-->
+    <string name="animal_human">"Human"</string>
+
+    <!-- Text that shows the animal's breed = Bat [CHAR LIMIT=50]-->
+    <string name="animal_bat">"Bat"</string>
+
+    <!-- Text that shows the animal's breed = Monkey [CHAR LIMIT=50]-->
+    <string name="animal_monkey">"Monkey"</string>
+
+    <!-- Text that shows the animal's breed = Snake [CHAR LIMIT=50]-->
+    <string name="animal_snake">"Snake"</string>
+
+    <!-- Text that shows the animal's breed = Eagle [CHAR LIMIT=50]-->
+    <string name="animal_eagle">"Eagle"</string>
+
+    <!-- Text that shows the animal's description = Lion [CHAR LIMIT=150]-->
+    <string name="lion_description">He has a large hair!</string>
+
+    <!-- Text that shows the animal's description = Horse [CHAR LIMIT=150]-->
+    <string name="horse_description">Fancy and powerful, he likes grass.</string>
+
+    <!-- Text that shows the animal's description = Penguin [CHAR LIMIT=150]-->
+    <string name="penguin_description">He is a gentleman. I like gentlemen!</string>
+
+    <!-- Text that shows the animal's description = Duck [CHAR LIMIT=150]-->
+    <string name="duck_description">My favorite, he is cute and likes fish.</string>
+
+    <!-- Text that shows the animal's description = Turtle [CHAR LIMIT=150]-->
+    <string name="turtle_description">Very smart, like me.</string>
+
+    <!-- Text that shows the animal's description = Crocodile [CHAR LIMIT=150]-->
+    <string name="crocodile_description">He is silly and ugly.</string>
+
+    <!-- Text that shows the animal's description = Whale [CHAR LIMIT=150]-->
+    <string name="whale_description">The biggest animal of the list, it is all that can I say.</string>
+
+    <!-- Text that shows the animal's description = Human [CHAR LIMIT=150]-->
+    <string name="human_description">You know more than me.</string>
+
+    <!-- Text that shows the animal's description = Bat [CHAR LIMIT=150]-->
+    <string name="bat_description">He flies like a butterfly, but not.</string>
+
+    <!-- Text that shows the animal's description = Monkey [CHAR LIMIT=150]-->
+    <string name="monkey_description">He thinks that he is a human, but don\'t tell to him.</string>
+
+    <!-- Text that shows the animal's description = Snake [CHAR LIMIT=150]-->
+    <string name="snake_description">Shua Shua Shua, said the snake.</string>
+
+    <!-- Text that shows the animal's description = Eagle [CHAR LIMIT=150]-->
+    <string name="eagle_description">Rhymes with Bingo.</string>
+
+    <!-- Player's Description = The App Master [CHAR LIMIT=25]-->
+    <string name="player1_name">Me</string>
+
+    <!-- Player's Description = The User [CHAR LIMIT=25]-->
+    <string name="player2_name">You</string>
+
+    <!-- User's answer when he/she choose yes [CHAR LIMIT=20]-->
+    <string name="yes_answer">Yes!</string>
+
+    <!-- User's answer when he/she choose no [CHAR LIMIT=20]-->
+    <string name="no_answer">No!</string>
+
+    <!-- The button's description that goes to animals' list [CHAR LIMIT=50]-->
+    <string name="btn_img_animals_list">Animals\' List</string>
+
+    <!-- The Tittle of the Animals' List [CHAR LIMIT=100]-->
+    <string name="animals_list_tittle">Let\'s check our animals below:</string>
+
 </resources>
