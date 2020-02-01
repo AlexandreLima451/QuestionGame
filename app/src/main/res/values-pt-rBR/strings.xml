@@ -191,4 +191,13 @@
 
     <!-- O titulo da lista de animais [CHAR LIMIT=100]-->
     <string name="animals_list_tittle">Vamos conferir nossos animais abaixo:</string>
+
+    <!-- Modo que a maquina tenta adivinhar o animal escolhido pelo jogador [CHAR LIMIT=20]-->
+    <string name="player_turn_mode">Turno do jogador</string>
+
+    <!-- Modo que o jogador tenta adivinhar o animal escolhido pela maquina [CHAR LIMIT=20]-->
+    <string name="machine_turn_mode">My Turn</string>
+
+    <!-- Modo Versus [CHAR LIMIT=20]-->
+    <string name="versus_mode">Modo Versus</string>
 </resources>

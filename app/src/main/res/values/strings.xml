@@ -191,4 +191,13 @@
     <!-- The Tittle of the Animals' List [CHAR LIMIT=100]-->
     <string name="animals_list_tittle">Let\'s check our animals below:</string>
 
+    <!-- Mode that the machine try to guess which animal was chosen by the player [CHAR LIMIT=20]-->
+    <string name="player_turn_mode">Player\'s Turn</string>
+
+    <!-- Mode that the player try to guess which animal was chosen by the player [CHAR LIMIT=20]-->
+    <string name="machine_turn_mode">My Turn</string>
+
+    <!-- Versus Mode [CHAR LIMIT=20]-->
+    <string name="versus_mode">Versus Mode</string>
+
 </resources>
