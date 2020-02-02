@@ -12,7 +12,7 @@ class MainMenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
 
         btn_players_turn_mode.setOnClickListener {
-
+            startPlayerTurnMode()
         }
 
         btn_machine_turn_mode.setOnClickListener {

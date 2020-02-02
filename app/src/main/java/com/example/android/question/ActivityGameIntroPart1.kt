@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.android.question.model.Introduction
 import kotlinx.android.synthetic.main.activity_game_intro_part1.*
 
 /**
@@ -11,8 +12,7 @@ import kotlinx.android.synthetic.main.activity_game_intro_part1.*
  */
 class ActivityGameIntroPart1 : AppCompatActivity() {
 
-    private var currentMessage : String = ""
-    private var currentMsgCode : Int = 0
+    private var introPlayerGuessing : Introduction = Introduction()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,47 +33,40 @@ class ActivityGameIntroPart1 : AppCompatActivity() {
         /**
          * setup the configuration of the introduction
          */
+
+        introPlayerGuessing.createMessage(this.getString(R.string.intro_text_1))
+        introPlayerGuessing.createMessage(this.getString(R.string.intro_text_2))
+        introPlayerGuessing.createMessage(this.getString(R.string.intro_text_3))
         btn_start_quiz.visibility = View.INVISIBLE
         btn_next.visibility = View.VISIBLE
-        currentMsgCode = 1
-        loadMessage()
-        intro_text.text = currentMessage
+
+        intro_text.text = introPlayerGuessing.showMessage()
     }
 
     /**
      * This method loads the messages according the order below
      */
     private fun loadMessage() {
-        this.currentMessage = when (currentMsgCode) {
-            1 -> resources.getString(R.string.intro_text_1)
-            2 -> resources.getString(R.string.intro_text_2)
-            3 -> resources.getString(R.string.intro_text_3)
-            else -> { // Note the block
-                " ? "
-            }
-        }
+        introPlayerGuessing.loadNextMessage()
     }
 
     /**
      * This method loads the previous message
      */
     fun previous(){
-        if (currentMsgCode > 1) currentMsgCode -= 1  // the lower value is 1
-        loadMessage()
-        intro_text.text = currentMessage
+        intro_text.text = introPlayerGuessing.loadPreviousMessage()
     }
 
     /**
      * This method loads the next message
      */
     fun next(){
-        if(currentMsgCode == 3){
-           showAnimalList()
+        if(introPlayerGuessing.hasNext()){
+            intro_text.text = introPlayerGuessing.loadNextMessage()
         }else{
-            currentMsgCode += 1
-            loadMessage()
-            intro_text.text = currentMessage
+            showAnimalList()
         }
+
     }
 
     /**
