@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.question.model.AnimalItem
 import com.example.android.question.model.AnimalItemAdapter
+import com.example.android.question.model.Introduction
 import kotlinx.android.synthetic.main.activity_animal_list.listview_animal
 import kotlinx.android.synthetic.main.activity_game_intro_part2.*
 
@@ -12,6 +13,8 @@ import kotlinx.android.synthetic.main.activity_game_intro_part2.*
  * This class refers to the intro of the game (part 2)
  */
 class ActivityGameIntroPart2 : AppCompatActivity() {
+
+    private var introduction : Introduction = Introduction.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,8 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
 
         listview_animal.adapter = animalAdapter
 
+        introduction = intent.getSerializableExtra("INTRO_MESSAGES") as Introduction
+
         btn_start_quiz.setOnClickListener {
             startQuestions()
         }
@@ -59,6 +64,7 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
      */
     private fun previous(){
         val intent = Intent(this, ActivityGameIntroPart1::class.java)
+        intent.putExtra("INTRO_MESSAGES", introduction)
         startActivity(intent)
         finish()
     }

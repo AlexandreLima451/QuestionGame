@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_game_intro_part1.*
  */
 class ActivityGameIntroPart1 : AppCompatActivity() {
 
-    private var introPlayerGuessing : Introduction = Introduction()
+    private var introduction : Introduction = Introduction.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,36 +33,26 @@ class ActivityGameIntroPart1 : AppCompatActivity() {
         /**
          * setup the configuration of the introduction
          */
-
-        introPlayerGuessing.createMessage(this.getString(R.string.intro_text_1))
-        introPlayerGuessing.createMessage(this.getString(R.string.intro_text_2))
-        introPlayerGuessing.createMessage(this.getString(R.string.intro_text_3))
+        introduction = intent.getSerializableExtra("INTRO_MESSAGES") as Introduction
         btn_start_quiz.visibility = View.INVISIBLE
         btn_next.visibility = View.VISIBLE
 
-        intro_text.text = introPlayerGuessing.showMessage()
-    }
-
-    /**
-     * This method loads the messages according the order below
-     */
-    private fun loadMessage() {
-        introPlayerGuessing.loadNextMessage()
+        intro_text.text = introduction.showMessage()
     }
 
     /**
      * This method loads the previous message
      */
     fun previous(){
-        intro_text.text = introPlayerGuessing.loadPreviousMessage()
+        intro_text.text = introduction.loadPreviousMessage()
     }
 
     /**
      * This method loads the next message
      */
     fun next(){
-        if(introPlayerGuessing.hasNext()){
-            intro_text.text = introPlayerGuessing.loadNextMessage()
+        if(introduction.hasNext()){
+            intro_text.text = introduction.loadNextMessage()
         }else{
             showAnimalList()
         }
@@ -74,6 +64,7 @@ class ActivityGameIntroPart1 : AppCompatActivity() {
      */
     private fun showAnimalList(){
         val intent = Intent(this, ActivityGameIntroPart2::class.java)
+        intent.putExtra("INTRO_MESSAGES", introduction)
         startActivity(intent)
         finish()
     }

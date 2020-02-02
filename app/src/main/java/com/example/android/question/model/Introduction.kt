@@ -1,18 +1,26 @@
 package com.example.android.question.model
 
+import java.io.Serializable
+
 /**
  * This class contains the behavior of a Game's Introduction*/
-class Introduction
-/**This constructor initializes the main attributes of the intro*/() {
+class Introduction : Serializable{
 
     private var messages : ArrayList<String>
     private var maxSize : Int
     private var currentPosition : Int
 
+    /**This constructor initializes the main attributes of the intro*/
     init {
         messages = arrayListOf()
         maxSize = 0
         currentPosition = 0
+    }
+
+    companion object{
+        fun newInstance() : Introduction{
+            return Introduction()
+        }
     }
 
     /**This method shows the current message
