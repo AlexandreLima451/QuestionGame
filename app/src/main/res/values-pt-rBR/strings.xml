@@ -27,20 +27,32 @@
     <!--Texto presente no botao que inicia outra partida [CHAR LIMIT=20]-->
     <string name="option_reset">Recomeçar</string>
 
-    <!-- Introducao da Maquina - Parte 1 [CHAR LIMIT=150]-->
-    <string name="intro_text_1">Olá, humano! Eu sou um computador muito inteligente, e fiquei sabendo que você também é. Então, eu decidi desafiá-lo para um jogo!</string>
+    <!-- Introducao da Maquina - Parte 1 (Modo do Jogador) [CHAR LIMIT=150]-->
+    <string name="intro_player_guessing_message_1">Olá, humano! Eu sou um computador muito inteligente, e fiquei sabendo que você também é. Então, eu decidi desafiá-lo para um jogo!</string>
 
-    <!-- Introducao da Maquina - Parte 2 [CHAR LIMIT=180]-->
-    <string name="intro_text_2">Você terá de pensar em um animal de acordo com a lista que mostrarei para você, e então eu farei algumas perguntas. Em cima de suas respostas, eu descobrirei que animal você escolheu. He he</string>
+    <!-- Introducao da Maquina - Parte 2 (Modo do Jogador) [CHAR LIMIT=180]-->
+    <string name="intro_player_guessing_message_2">Você terá de pensar em um animal de acordo com a lista que mostrarei para você, e então eu farei algumas perguntas. Em cima de suas respostas, eu descobrirei que animal você escolheu. He he</string>
 
-    <!-- Introducao da Maquina - Parte 3 [CHAR LIMIT=70]-->
-    <string name="intro_text_3">Parece fácil, não acha? Agora, confira a lista a seguir</string>
+    <!-- Introducao da Maquina - Parte 3 (Modo do Jogador) [CHAR LIMIT=70]-->
+    <string name="intro_player_guessing_message_3">Parece fácil, não acha? Agora, confira a lista a seguir:</string>
 
-    <!-- Introducao da Maquina - Parte 4 [CHAR LIMIT=255]-->
-    <string name="intro_text_4">Um leão, um cavalo, um humano (você, eu suponho), um macaco (alguém como você, imagino), um morcego, uma baleia, um avestruz, um pinguim, um pato (meu favorito), uma águia, um crocodilo e, por último, mas não menos importante, uma cobra (algo como assim S)</string>
+    <!-- Introducao da Maquina - Parte 4 (Modo do Jogador) [CHAR LIMIT=255]-->
+    <string name="intro_player_guessing_message_4">Um leão, um cavalo, um humano (você, eu suponho), um macaco (alguém como você, imagino), um morcego, uma baleia, um avestruz, um pinguim, um pato (meu favorito), uma águia, um crocodilo e, por último, mas não menos importante, uma cobra (algo como assim S)</string>
 
-    <!-- Introducao da Maquina - Parte 5 [CHAR LIMIT=25]-->
-    <string name="intro_text_5">Você está preparado?</string>
+    <!-- Introducao da Maquina - Parte 5  (Modo do Jogador) [CHAR LIMIT=25]-->
+    <string name="intro_player_guessing_message_5">Você está preparado?</string>
+
+    <!-- Introducao da Maquina - Part 1 (Modo da Máquina) [CHAR LIMIT=150]-->
+    <string name="intro_machine_guessing_message_1">"Olá, meu humano favorito! Eu sou um computador muito criativo, e eu tenho escutado que você é bom em jogos. Então, eu decidi desafiá-lo para um jogo. ;)"</string>
+
+    <!-- Introducao da Maquina - Part 2 (Modo da Máquina) [CHAR LIMIT=180]-->
+    <string name="intro_machine_guessing_message_2">É a hora de eu pensar num animal enquanto você tenta adivinhar qual eu escolhi. He he</string>
+
+    <!-- Introducao da Maquina - Part 3 (Modo da Máquina) [CHAR LIMIT=70]-->
+    <string name="intro_machine_guessing_message_3">Parece fácil, não acha? Agora, confira a lista a seguir:</string>
+
+    <!-- Introducao da Maquina - Part 4 (Modo da Máquina) [CHAR LIMIT=25]-->
+    <string name="intro_machine_guessing_message_4">"Você está pronto?"</string>
 
     <!-- Texto da primeira questao [CHAR LIMIT=50]-->
     <string name="question_mammal">O animal é um mamífero?</string>
@@ -196,8 +208,30 @@
     <string name="player_turn_mode">Turno do jogador</string>
 
     <!-- Modo que o jogador tenta adivinhar o animal escolhido pela maquina [CHAR LIMIT=20]-->
-    <string name="machine_turn_mode">My Turn</string>
+    <string name="machine_turn_mode">Turno da CPU</string>
 
     <!-- Modo Versus [CHAR LIMIT=20]-->
     <string name="versus_mode">Modo Versus</string>
+
+    <!-- Dica informada pela máquina (no Modo Jogador) [CHAR LIMIT=50]-->
+    <string name="machine_hint1">Pressione o pato para ver a lista de animais</string>
+
+    <!-- O jogador pergunta se o animal é um mamífero [CHAR LIMIT=20]-->
+    <string name="opt_quest_mammal">"É mamífero?"</string>
+
+    <!-- O jogador pergunta se o animal é quadrúpede [CHAR LIMIT=20]-->
+    <string name="opt_quest_quadruped">"É quadrúpede?"</string>
+
+    <!-- O jogador pergunta se o animal é carnívoro [CHAR LIMIT=20]-->
+    <string name="opt_quest_carnivore">"É carnívoro?"</string>
+
+    <!-- O jogador pergunta se o animal é herbívoro [CHAR LIMIT=20]-->
+    <string name="opt_quest_herbivore">"É herbívoro?"</string>
+
+    <!-- O jogador pergunta se o animal tem nadadeiras [CHAR LIMIT=20]-->
+    <string name="opt_quest_fins">"Tem nadadeiras?"</string>
+
+    <!-- O jogador pergunta se o animal é voador [CHAR LIMIT=20]-->
+    <string name="opt_quest_flying">"É voador?"</string>
+
 </resources>

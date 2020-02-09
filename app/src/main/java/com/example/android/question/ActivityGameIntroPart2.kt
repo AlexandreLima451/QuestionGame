@@ -4,7 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.question.model.AnimalItem
-import com.example.android.question.model.AnimalItemAdapter
+import com.example.android.question.model.adapter.AnimalItemAdapter
 import com.example.android.question.model.Introduction
 import kotlinx.android.synthetic.main.activity_animal_list.listview_animal
 import kotlinx.android.synthetic.main.activity_game_intro_part2.*
@@ -15,6 +15,9 @@ import kotlinx.android.synthetic.main.activity_game_intro_part2.*
 class ActivityGameIntroPart2 : AppCompatActivity() {
 
     private var introduction : Introduction = Introduction.newInstance()
+    private var matchType : Int = 0
+    private val PLAYER_GUESSING = 1
+    private val MACHINE_GUESSING = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +43,11 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
         listview_animal.adapter = animalAdapter
 
         introduction = intent.getSerializableExtra("INTRO_MESSAGES") as Introduction
+        matchType = intent.getIntExtra("MATCH_TYPE", 0)
 
         btn_start_quiz.setOnClickListener {
-            startQuestions()
+            if (matchType == this.PLAYER_GUESSING) startPlayerMatch()
+            if (matchType == this.MACHINE_GUESSING) startMachineMatch()
         }
 
         btn_previous.setOnClickListener {
@@ -51,10 +56,19 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
     }
 
     /**
-     * This method starts a new match
+     * This method starts a new match (Player Guessing)
      */
-    private fun startQuestions(){
-        val intent = Intent(this, ActivityGameQuestions::class.java)
+    private fun startPlayerMatch(){
+        val intent = Intent(this, PlayerMatchActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    /**
+     * This method starts a new match (Machine Guessing)
+     */
+    private fun startMachineMatch(){
+        val intent = Intent(this, MachineMatchActivity::class.java)
         startActivity(intent)
         finish()
     }

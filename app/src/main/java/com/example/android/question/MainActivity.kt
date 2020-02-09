@@ -1,5 +1,5 @@
 /***
- * QuestionModel Game!
+ * Animal Game!
  *
  * App developed by
  * @author Alexandre Lima

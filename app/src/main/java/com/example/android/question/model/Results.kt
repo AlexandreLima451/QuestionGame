@@ -2,13 +2,14 @@ package com.example.android.question.model
 
 import com.example.android.question.R
 import com.example.android.question.util.MainApplication
+import java.util.*
 
 abstract class Results {
 
     companion object {
 
         private val lion = Animal(breed = "lion", isMammal = true, isQuadruped = true, isCarnivore = true,
-                          isHerbivore = false, isFlying = false, hasFins = false)
+                isHerbivore = false, isFlying = false, hasFins = false)
         private val horse = Animal(breed = "horse", isMammal = true, isQuadruped = true, isCarnivore = false,
                 isHerbivore = true, isFlying = false, hasFins = false)
         private val ostrich = Animal(breed = "ostrich", isMammal = false, isQuadruped = false, isCarnivore = true,
@@ -54,6 +55,20 @@ abstract class Results {
                     "EAGLE"    to ResultModel(eagle, MainApplication.applicationContext().resources.getString(R.string.answer_eagle))
             )
         }
-    }
 
+
+        fun randomAnimal() : ResultModel {
+            val animal = ResultModel(none, "Acho que não consegui pensar direito")
+            val possibleAnimals = newInstance()
+            val size = possibleAnimals.size
+            val item = Random().nextInt(size)
+            val ind = 0
+
+            possibleAnimals.forEach {
+                if(ind == item) return it.value
+            }
+
+            return animal
+        }
+    }
 }

@@ -7,7 +7,7 @@ import java.util.*
 /**
  * This class handles with the match's logic
  */
-class Match {
+class PlayerMatch {
 
     var currentQuestion = Questions.noQuestion
     private var currentAnswer = false

@@ -1,4 +1,4 @@
-package com.example.android.question.model
+package com.example.android.question.model.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,10 +8,11 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.android.question.R
+import com.example.android.question.model.AnimalItem
 
-class AnimalItemAdapter(context: Context?, resource: Int, animalItens: MutableList<AnimalItem>?) : ArrayAdapter<AnimalItem>(context, resource, animalItens) {
+class AnimalItemAdapter(context: Context, resource: Int, animalItens: MutableList<AnimalItem>) : ArrayAdapter<AnimalItem>(context, resource, animalItens) {
 
-    constructor(context: Context?, animalItens: MutableList<AnimalItem>?) : this(context, 0, animalItens)
+    constructor(context: Context, animalItens: MutableList<AnimalItem>) : this(context, 0, animalItens)
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
@@ -29,9 +30,11 @@ class AnimalItemAdapter(context: Context?, resource: Int, animalItens: MutableLi
         val animalBreedTextView = listItemView.findViewById(R.id.animal_breed) as TextView
         val animalDescriptionView = listItemView.findViewById(R.id.animal_description) as TextView
 
-        animalImageView.setImageResource(currentAnimalItem.animalImage)
-        animalBreedTextView.text = context.resources.getString(currentAnimalItem.animalBreed)
-        animalDescriptionView.text = context.resources.getString(currentAnimalItem.animalDescription)
+        currentAnimalItem?.let {
+            animalImageView.setImageResource(it.animalImage)
+            animalBreedTextView.text = context.resources.getString(it.animalBreed)
+            animalDescriptionView.text = context.resources.getString(it.animalDescription)
+        }
 
         return listItemView
     }

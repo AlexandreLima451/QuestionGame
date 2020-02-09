@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_game_intro_part1.*
 class ActivityGameIntroPart1 : AppCompatActivity() {
 
     private var introduction : Introduction = Introduction.newInstance()
+    private var matchType : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,7 @@ class ActivityGameIntroPart1 : AppCompatActivity() {
          * setup the configuration of the introduction
          */
         introduction = intent.getSerializableExtra("INTRO_MESSAGES") as Introduction
+        matchType = intent.getIntExtra("MATCH_TYPE", 1)
         btn_start_quiz.visibility = View.INVISIBLE
         btn_next.visibility = View.VISIBLE
 
@@ -44,19 +46,18 @@ class ActivityGameIntroPart1 : AppCompatActivity() {
      * This method loads the previous message
      */
     fun previous(){
-        intro_text.text = introduction.loadPreviousMessage()
+        if(introduction.hasPrevious())
+            intro_text.text = introduction.loadPreviousMessage()
+        else showMainMenu()
     }
 
     /**
      * This method loads the next message
      */
     fun next(){
-        if(introduction.hasNext()){
+        if(introduction.hasNext())
             intro_text.text = introduction.loadNextMessage()
-        }else{
-            showAnimalList()
-        }
-
+        else showAnimalList()
     }
 
     /**
@@ -65,6 +66,16 @@ class ActivityGameIntroPart1 : AppCompatActivity() {
     private fun showAnimalList(){
         val intent = Intent(this, ActivityGameIntroPart2::class.java)
         intent.putExtra("INTRO_MESSAGES", introduction)
+        intent.putExtra("MATCH_TYPE", matchType)
+        startActivity(intent)
+        finish()
+    }
+
+    /**
+     * This method returns to main menu
+     */
+    private fun showMainMenu(){
+        val intent = Intent(this, MainMenuActivity::class.java)
         startActivity(intent)
         finish()
     }

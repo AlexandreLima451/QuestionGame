@@ -37,6 +37,14 @@ class Introduction : Serializable{
         return true
     }
 
+    /**This method confirms if exists next message to load
+     * @return true if exists next message */
+    fun hasPrevious(): Boolean {
+        if (messages.isEmpty()) return false
+        if (currentPosition == 0) return false
+        return true
+    }
+
     /**This method returns the next message, in order by insertion
      * @return the next message*/
     fun loadNextMessage(): String {

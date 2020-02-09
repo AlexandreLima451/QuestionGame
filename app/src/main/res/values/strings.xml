@@ -26,20 +26,32 @@
     <!--Text present in button that initiates another match [CHAR LIMIT=20]-->
     <string name="option_reset">Try Again!</string>
 
-    <!-- Computer's Introduction - Part 1 [CHAR LIMIT=150]-->
-    <string name="intro_text_1">"Hi, human! I'm a very smart computer, and I have heard that you are smart too. So, I decided to challenge you for a game. ;)"</string>
+    <!-- Computer's Introduction - Part 1 (Player Guessing's Mode) [CHAR LIMIT=150]-->
+    <string name="intro_player_guessing_message_1">"Hi, human! I'm a very smart computer, and I have heard that you are smart too. So, I decided to challenge you for a game. ;)"</string>
 
-    <!-- Computer's Introduction - Part 2 [CHAR LIMIT=180]-->
-    <string name="intro_text_2">You\'ll have to think an animal according the list I\'ll show you, and then I\'ll make some questions. Based on your answers, I\'ll figure out which animal you chose. He he</string>
+    <!-- Computer's Introduction - Part 2 (Player Guessing's Mode) [CHAR LIMIT=180]-->
+    <string name="intro_player_guessing_message_2">You\'ll have to think an animal according the list I\'ll show you, and then I\'ll make some questions. Based on your answers, I\'ll figure out which animal you chose. He he</string>
 
-    <!-- Computer's Introduction - Part 3 [CHAR LIMIT=70]-->
-    <string name="intro_text_3">Sounds easy, don\'t you think? Now, check the following list:</string>
+    <!-- Computer's Introduction - Part 3 (Player Guessing's Mode) [CHAR LIMIT=70]-->
+    <string name="intro_player_guessing_message_3">Sounds easy, don\'t you think? Now, check the following list:</string>
 
-    <!-- Computer's Introduction - Part 4 [CHAR LIMIT=255]-->
-    <string name="intro_text_4">"A Lion, a horse, a human (you, I suppose), a monkey (someone like you, I guess), a bat, a whale, an ostrich, a penguin, a duck (my favorite), an eagle, a turtle, a crocodile and, last but not least, a snake (something like S)!"</string>
+    <!-- Computer's Introduction - Part 4 (Player Guessing's Mode) [CHAR LIMIT=255]-->
+    <string name="intro_player_guessing_message_4">"A Lion, a horse, a human (you, I suppose), a monkey (someone like you, I guess), a bat, a whale, an ostrich, a penguin, a duck (my favorite), an eagle, a turtle, a crocodile and, last but not least, a snake (something like S)!"</string>
 
-    <!-- Computer's Introduction - Part 5 [CHAR LIMIT=25]-->
-    <string name="intro_text_5">"Are you ready?"</string>
+    <!-- Computer's Introduction - Part 5 (Player Guessing's Mode) [CHAR LIMIT=25]-->
+    <string name="intro_player_guessing_message_5">"Are you ready?"</string>
+
+    <!-- Computer's Introduction - Part 1 (Machine Guessing's Mode) [CHAR LIMIT=150]-->
+    <string name="intro_machine_guessing_message_1">"Hi, my favorite human! I'm a very creative computer, and I have heard that you are good in games. So, I decided to challenge you for a one. ;)"</string>
+
+    <!-- Computer's Introduction - Part 2 (Machine Guessing's Mode) [CHAR LIMIT=180]-->
+    <string name="intro_machine_guessing_message_2">It\'s time to I think an animal while you try to figure out which I chose. He he</string>
+
+    <!-- Computer's Introduction - Part 3 (Machine Guessing's Mode) [CHAR LIMIT=70]-->
+    <string name="intro_machine_guessing_message_3">Sounds easy, don\'t you think? Now, check the following list:</string>
+
+    <!-- Computer's Introduction - Part 4 (Machine Guessing's Mode) [CHAR LIMIT=25]-->
+    <string name="intro_machine_guessing_message_4">"Are you ready?"</string>
 
     <!-- Text of the first question [CHAR LIMIT=50]-->
     <string name="question_mammal">"Is the animal a mammal?"</string>
@@ -199,5 +211,26 @@
 
     <!-- Versus Mode [CHAR LIMIT=20]-->
     <string name="versus_mode">Versus Mode</string>
+
+    <!-- Hint given by the machine (at Machine Guessing's Mode) [CHAR LIMIT=50]-->
+    <string name="machine_hint1">Click on the duck to see the animal list</string>
+
+    <!-- The player ask if the animal is a mammal [CHAR LIMIT=20]-->
+    <string name="opt_quest_mammal">"Is it a mammal?"</string>
+
+    <!-- The player ask if the animal is quadruped [CHAR LIMIT=20]-->
+    <string name="opt_quest_quadruped">"Is it a quadruped?"</string>
+
+    <!-- The player ask if the animal is carnivore [CHAR LIMIT=20]-->
+    <string name="opt_quest_carnivore">"Is it a carnivore?"</string>
+
+    <!-- The player ask if the animal is herbivore [CHAR LIMIT=20]-->
+    <string name="opt_quest_herbivore">"Is it a herbivore?"</string>
+
+    <!-- The player ask if the animal has fins [CHAR LIMIT=20]-->
+    <string name="opt_quest_fins">"Does it have fins?"</string>
+
+    <!-- The player ask if the animal can fly [CHAR LIMIT=20]-->
+    <string name="opt_quest_flying">"Can it fly?"</string>
 
 </resources>

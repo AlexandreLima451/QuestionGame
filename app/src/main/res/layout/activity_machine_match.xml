@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MachineMatchActivity"
     android:orientation="vertical"
-    tools:context=".ActivityGameQuestions"
     android:background="@android:color/black">
 
     <LinearLayout
@@ -14,12 +14,20 @@
         android:layout_weight="0"
         android:orientation="horizontal">
 
+        <ImageButton
+            android:id="@+id/btn_img_machine_face"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/happy"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/btn_img_animals_list" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:gravity="center"
-            android:text="0 X 0"
-            style="@style/ConsoleAppDialog"/>
+            android:text="@string/machine_hint1"
+            style="@style/ConsoleAppSimpleText"/>
 
         <ImageButton
             android:id="@+id/btn_img_animals_list"
@@ -40,7 +48,7 @@
         android:scrollbarThumbVertical="@android:color/white">
     </ListView>
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="2"
@@ -67,5 +75,14 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:visibility="invisible" />
-    </RelativeLayout>
+    </RelativeLayout>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/question_list"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

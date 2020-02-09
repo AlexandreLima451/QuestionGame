@@ -9,30 +9,43 @@ import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainMenuActivity : AppCompatActivity() {
 
+    private val PLAYER_GUESSING = 1
+    private val MACHINE_GUESSING = 2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
         btn_players_turn_mode.setOnClickListener {
             val introPlayerGuessing = Introduction.newInstance()
-            introPlayerGuessing.createMessage(this.getString(R.string.intro_text_1))
-            introPlayerGuessing.createMessage(this.getString(R.string.intro_text_2))
-            introPlayerGuessing.createMessage(this.getString(R.string.intro_text_3))
+            introPlayerGuessing.createMessage(this.getString(R.string.intro_player_guessing_message_1))
+            introPlayerGuessing.createMessage(this.getString(R.string.intro_player_guessing_message_2))
+            introPlayerGuessing.createMessage(this.getString(R.string.intro_player_guessing_message_3))
             startPlayerTurnMode(applicationContext, introPlayerGuessing)
         }
 
         btn_machine_turn_mode.setOnClickListener {
-
+            val introMachineGuessing = Introduction.newInstance()
+            introMachineGuessing.createMessage(this.getString(R.string.intro_machine_guessing_message_1))
+            introMachineGuessing.createMessage(this.getString(R.string.intro_machine_guessing_message_2))
+            introMachineGuessing.createMessage(this.getString(R.string.intro_machine_guessing_message_3))
+            startMachineTurnMode(applicationContext, introMachineGuessing)
         }
 
-        btn_versus_mode.setOnClickListener {
-
-        }
     }
 
     private fun startPlayerTurnMode(context : Context, introPlayerGuessing : Introduction){
         val intent = Intent(context, ActivityGameIntroPart1::class.java )
         intent.putExtra("INTRO_MESSAGES", introPlayerGuessing)
+        intent.putExtra("MATCH_TYPE", this.PLAYER_GUESSING)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun startMachineTurnMode(context : Context, introMachineGuessing : Introduction){
+        val intent = Intent(context, ActivityGameIntroPart1::class.java )
+        intent.putExtra("INTRO_MESSAGES", introMachineGuessing)
+        intent.putExtra("MATCH_TYPE", this.MACHINE_GUESSING)
         startActivity(intent)
         finish()
     }

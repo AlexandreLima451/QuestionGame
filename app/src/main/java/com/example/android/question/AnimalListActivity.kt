@@ -3,7 +3,7 @@ package com.example.android.question
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.question.model.AnimalItem
-import com.example.android.question.model.AnimalItemAdapter
+import com.example.android.question.model.adapter.AnimalItemAdapter
 import kotlinx.android.synthetic.main.activity_animal_list.*
 
 class AnimalListActivity : AppCompatActivity() {

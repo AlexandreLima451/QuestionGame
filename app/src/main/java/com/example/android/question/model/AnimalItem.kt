@@ -1,3 +1,3 @@
 package com.example.android.question.model
 
-data class AnimalItem(var animalImage: Int, var animalBreed: Int, var animalDescription : Int)
+data class AnimalItem(val animalImage: Int, val animalBreed: Int, val animalDescription : Int)
