@@ -15,7 +15,7 @@ import com.example.android.question.model.adapter.MessageAdapter
 
 class PlayerMatchActivity : AppCompatActivity() {
 
-    private var match = PlayerMatch()
+    private var match = PlayerMatch(this)
     private var messageMutableList = mutableListOf<Message>()
     private var messageAdapter : MessageAdapter? = null
     private var player1Description = ""

@@ -1,31 +1,55 @@
 package com.example.android.question.model
 
+import android.content.Context
 import com.example.android.question.R
-import com.example.android.question.util.MainApplication
 import java.util.*
 
 /**
- * This class handles with the match's logic
+ * This class handles with the player match's logic
  */
-class PlayerMatch {
+class PlayerMatch(context: Context) {
 
+    private val applicationContext = context
     var currentQuestion = Questions.noQuestion
     private var currentAnswer = false
     private var questions : MutableMap<String, QuestionModel> = hashMapOf()
     private var results : MutableMap<String, ResultModel> = hashMapOf()
-    private var finalResult = ResultModel(Results.none, "")
+    private var finalResult = ResultModel(Animals.none, "")
 
     /**
      * This method initializes the match
      * */
     fun init(){
         questions = Questions.loadMainQuestions()
-        results = Results.newInstance()
+        results = loadResults()
         loadQuestion()
         currentAnswer = false
-        finalResult = ResultModel(Results.none, "")
+        finalResult = ResultModel(Animals.none, "")
     }
 
+    /**
+     * This method loads the possible results of Player Match' mode
+     * @return a map of results
+     * */
+    private fun loadResults() : MutableMap<String, ResultModel>{
+
+        return mutableMapOf(
+                "LION"    to ResultModel(Animals.lion, applicationContext.resources.getString(R.string.answer_lion)),
+                "HORSE"    to ResultModel(Animals.horse, applicationContext.resources.getString(R.string.answer_horse)),
+                "OSTRICH"    to ResultModel(Animals.ostrich, applicationContext.resources.getString(R.string.answer_ostrich)),
+                "PENGUIN"    to ResultModel(Animals.penguin, applicationContext.resources.getString(R.string.answer_penguin)),
+                "DUCK"    to ResultModel(Animals.duck, applicationContext.resources.getString(R.string.answer_duck)),
+                "TURTLE"    to ResultModel(Animals.turtle, applicationContext.resources.getString(R.string.answer_turtle)),
+                "CROCODILE"    to ResultModel(Animals.crocodile, applicationContext.resources.getString(R.string.answer_crocodile)),
+                "WHALE"    to ResultModel(Animals.whale, applicationContext.resources.getString(R.string.answer_whale)),
+                "HUMAN"    to ResultModel(Animals.human, applicationContext.resources.getString(R.string.answer_human)),
+                "BAT"    to ResultModel(Animals.bat, applicationContext.resources.getString(R.string.answer_bat)),
+                "MONKEY"    to ResultModel(Animals.monkey, applicationContext.resources.getString(R.string.answer_monkey)),
+                "SNAKE"    to ResultModel(Animals.snake, applicationContext.resources.getString(R.string.answer_snake)),
+                "EAGLE"    to ResultModel(Animals.eagle, applicationContext.resources.getString(R.string.answer_eagle))
+        )
+    }
+    
     /**
      * This method tries to figure out which animal was chosen
      * @return true if it found a correct result
@@ -65,8 +89,8 @@ class PlayerMatch {
      * @return result's message
      * */
     fun finish() : String{
-        if (finalResult.animal.breed == "none"){ finalResult = ResultModel(Results.none,
-                MainApplication.applicationContext().resources.getString(R.string.answer_none)) }
+        if (finalResult.animal.breed == "none"){ finalResult = ResultModel(Animals.none,
+                applicationContext.resources.getString(R.string.answer_none)) }
         val finalText = finalResult.resultText
         questions.clear()
         results.clear()

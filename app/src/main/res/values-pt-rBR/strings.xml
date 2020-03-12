@@ -234,4 +234,25 @@
     <!-- O jogador pergunta se o animal é voador [CHAR LIMIT=20]-->
     <string name="opt_quest_flying">"É voador?"</string>
 
+    <!-- A máquina confirma que o animal é um mamífero [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_mammal">Sim! Ele é um mamífero lindo!</string>
+
+    <!-- A máquina confirma que o animal é um herbívoro [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_herbivore">Sim! Ele é um herbívoro!</string>
+
+    <!-- A máquina confirma que o animal é um quadrúpede [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_quadruped">Sim! Ele é quadrupede, como o leão…</string>
+
+    <!-- A máquina confirma que o animal é um carnívoro [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_carnivore">Sim! Ele gosta de carne.</string>
+
+    <!-- A máquina confirma que o animal tem nadadeiras [CHAR LIMIT=20]-->
+    <string name="answer_animal_has_fins">Sim! Ele nada a ver.</string>
+
+    <!-- A máquina confirma que o animal é um voador [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_flying">Sim! Ele é voador!</string>
+
+    <!-- A resposta da maquina quando negar uma característica do animal [CHAR LIMIT=10]-->
+    <string name="mach_negative_answer">Não!</string>
+
 </resources>

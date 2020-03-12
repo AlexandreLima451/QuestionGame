@@ -233,4 +233,25 @@
     <!-- The player ask if the animal can fly [CHAR LIMIT=20]-->
     <string name="opt_quest_flying">"Can it fly?"</string>
 
+    <!-- The machine confirms that animal is a mammal [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_mammal">Yes! It is a beautiful mammal!</string>
+
+    <!-- The machine confirms that animal is a herbivore [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_herbivore">Yes! It is a herbivore!</string>
+
+    <!-- The machine confirms that animal is a quadruped [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_quadruped">Yes! It is a quadruped, like the lion…</string>
+
+    <!-- The machine confirms that animal is a carnivore [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_carnivore">Yes! It likes meat.</string>
+
+    <!-- The machine confirms that animal has fins [CHAR LIMIT=20]-->
+    <string name="answer_animal_has_fins">Yes! It has fins like a fish. :)</string>
+
+    <!-- The machine confirms that animal is a flying [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_flying">Yes! It is a flying!</string>
+
+    <!-- The machine's answer when it denies the animal's characteristic [CHAR LIMIT=10]-->
+    <string name="mach_negative_answer">Nop!</string>
+
 </resources>
