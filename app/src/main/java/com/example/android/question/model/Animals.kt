@@ -34,7 +34,7 @@ abstract class Animals {
         val none = Animal(breed = "none", isMammal = false, isQuadruped = false, isCarnivore = false,
                 isHerbivore = false, isFlying = false, hasFins = false)
 
-        private fun listOfAnimals() : Map<Int, Animal>{
+        fun listOfAnimals() : Map<Int, Animal>{
             val animals = mutableMapOf<Int, Animal>()
             animals[0] = lion
             animals[1] = horse

@@ -13,7 +13,7 @@
 
         <!-- android:theme="@style/AppTheme"> -->
 
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -21,12 +21,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityGameIntroPart1" android:theme="@style/ConsoleTheme"/>
-        <activity android:name=".ActivityGameIntroPart2" android:theme="@style/ConsoleTheme"/>
-        <activity android:name=".PlayerMatchActivity" android:theme="@style/ConsoleTheme"/>
-        <activity android:name=".AnimalListActivity" android:theme="@style/ConsoleTheme"/>
-        <activity android:name=".MainMenuActivity" android:theme="@style/ConsoleTheme"/>
-        <activity android:name=".MachineMatchActivity" android:theme="@style/ConsoleTheme"/>
+        <activity
+            android:name=".ActivityGameIntroPart1"
+            android:theme="@style/ConsoleTheme" />
+        <activity
+            android:name=".ActivityGameIntroPart2"
+            android:theme="@style/ConsoleTheme" />
+        <activity
+            android:name=".PlayerMatchActivity"
+            android:theme="@style/ConsoleTheme" />
+        <activity
+            android:name=".AnimalListActivity"
+            android:theme="@style/ConsoleTheme" />
+        <activity
+            android:name=".MainMenuActivity"
+            android:theme="@style/ConsoleTheme" />
+        <activity
+            android:name=".MachineMatchActivity"
+            android:theme="@style/ConsoleTheme" />
+        <activity android:name=".AnimalOptionListActivity"></activity>
     </application>
 
 </manifest>

@@ -5,10 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import com.example.android.question.model.MachineMatch
-import com.example.android.question.model.Message
+import com.example.android.question.model.*
 import com.example.android.question.model.adapter.MessageAdapter
-import com.example.android.question.model.QuestionModel
 import com.example.android.question.model.adapter.QuestionAdapter
 import com.example.android.question.model.adapter.AdapterListener
 import kotlinx.android.synthetic.main.activity_machine_match.*
@@ -37,26 +35,25 @@ class MachineMatchActivity : AppCompatActivity() {
         val questionRecycler = question_list
 
         txt_dialog.adapter = messageAdapter
-        questionAdapter = QuestionAdapter(machineMatch.getQuestions(), this, object : AdapterListener {
+        questionAdapter = QuestionAdapter(this, object : AdapterListener {
             override fun onClick(content: QuestionModel, position : Int) {
                 showPlayer2Text(content.text)
 
-                val answerText = getAnswerText(content.title)
-
-                if (machineMatch.answerQuestion(content)) { // In an affirmative case...
-                    showPlayer1Text(answerText)
-                } else {
-                    showPlayer1Text(getString(R.string.mach_negative_answer))
-                }
+                showPlayer1Text(machineMatch.answerQuestion(content))
 
                 machineMatch.removeQuestion(content)
-                //questionRecycler.removeViewAt(pos)
+
                 questionAdapter?.notifyItemRemoved(position)
                 questionAdapter?.notifyItemRangeChanged(position, machineMatch.getQuantityOfQuestions())
-                //questionAdapter?.notifyDataSetChanged()
 
+                rel_lyt_ask_player.visibility = View.VISIBLE
+                question_list.visibility = View.INVISIBLE
             }
         })
+
+        questionAdapter!!.addQuestions(machineMatch.getQuestions())
+
+        showPlayer1Text(machineMatch.getMatchIntro())
 
         questionRecycler.adapter = questionAdapter
 
@@ -64,37 +61,36 @@ class MachineMatchActivity : AppCompatActivity() {
         questionRecycler.layoutManager = layoutManager
 
         btn_ask_question.setOnClickListener{
-            rel_lyt_ask_player.visibility = View.INVISIBLE
-            question_list.visibility = View.VISIBLE
+            if(machineMatch.getQuantityOfQuestions() > 0){
+                rel_lyt_ask_player.visibility = View.INVISIBLE
+                question_list.visibility = View.VISIBLE
+            }else{
+                showPlayer1Text(machineMatch.answerQuestion(QuestionModel("noQuestion", "")))
+                btn_ask_question.visibility = View.INVISIBLE
+            }
         }
 
         btn_img_animals_list.setOnClickListener{
             showAnimalsList()
         }
-    }
 
-    private fun getAnswerText(animalBreed: String): String {
-        var answerText = "none"
-
-        when(animalBreed){
-            "mammal" -> answerText = this.getString(R.string.answer_animal_is_mammal)
-            "quadruped" -> answerText = this.getString(R.string.answer_animal_is_quadruped)
-            "carnivore" -> answerText = this.getString(R.string.answer_animal_is_carnivore)
-            "herbivore" -> answerText = this.getString(R.string.answer_animal_is_herbivore)
-            "flying" -> answerText = this.getString(R.string.answer_animal_is_flying)
-            "fins" -> answerText = this.getString(R.string.answer_animal_has_fins)
+        btn_answer.setOnClickListener{
+            showValidAnswer()
         }
 
-        return answerText
+        btn_reset.setOnClickListener{
+            resetGame()
+        }
     }
 
-    /*private fun updateQuestionsList() {
-        val countQuestionAdapter = questionAdapter?.count
-        if (countQuestionAdapter != null) {
-            question_list.up.setSelection(countQuestionAdapter.minus(1))
-        }
-    }*/
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val resultModel = data?.getSerializableExtra("FINAL_RESULT") as ResultModel
+        showPlayer2Text(resultModel.resultText)
+        finishGame(resultModel)
+    }
 
+    /**Method that scrolls to the last message*/
     private fun scrollingDialog(){
         val countMessageAdapter = messageAdapter?.count
         if (countMessageAdapter != null) {
@@ -102,6 +98,7 @@ class MachineMatchActivity : AppCompatActivity() {
         }
     }
 
+    /**Method that shows the machine's text*/
     private fun showPlayer1Text(answerPlayer1: String){
         messageMutableList.add(Message(senderName = player1Description,
                 content = answerPlayer1,
@@ -111,6 +108,7 @@ class MachineMatchActivity : AppCompatActivity() {
         scrollingDialog()
     }
 
+    /**Method that shows the player's text*/
     private fun showPlayer2Text(answerPlayer2 : String){
         messageMutableList.add(Message(senderName = player2Description,
                 content = answerPlayer2,
@@ -120,8 +118,44 @@ class MachineMatchActivity : AppCompatActivity() {
         scrollingDialog()
     }
 
+    /**
+     * Method that shows the animal list
+     */
     private fun showAnimalsList(){
         val intent = Intent(applicationContext, AnimalListActivity::class.java)
         startActivity(intent)
     }
+
+    /**
+     * Method that shows a list of possible answers (animals) for the player
+     */
+    private fun showValidAnswer(){
+        val intent = Intent(applicationContext, AnimalOptionListActivity::class.java)
+        startActivityForResult(intent, 0x9988)
+    }
+
+    /**
+     * This method finishes the game
+     */
+    private fun finishGame(result : ResultModel?){
+        showPlayer1Text(machineMatch.finish(result))
+
+        btn_ask_question.visibility = View.INVISIBLE
+        btn_answer.visibility = View.INVISIBLE
+        btn_reset.visibility = View.VISIBLE
+    }
+
+    /**
+     * This method initiates a new match
+     */
+    private fun resetGame(){
+        btn_ask_question.visibility = View.VISIBLE
+        btn_answer.visibility = View.VISIBLE
+        btn_reset.visibility = View.INVISIBLE
+
+        machineMatch.reset()
+        questionAdapter!!.addQuestions(machineMatch.getQuestions())
+        showPlayer1Text(machineMatch.getMatchIntro())
+    }
+
 }

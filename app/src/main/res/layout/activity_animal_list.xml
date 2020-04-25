@@ -19,13 +19,22 @@
         style="@style/ConsoleAppDialog"
         android:text="@string/animals_list_tittle"/>
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listview_animal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:scrollbarThumbVertical="@android:color/white">
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<ListView
         android:id="@+id/listview_animal"
         android:background="@android:color/black"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
         android:listSelector="@android:color/transparent"
-        android:scrollbarThumbVertical="@android:color/white"/>
+        android:scrollbarThumbVertical="@android:color/white"/>-->
 
 </LinearLayout>

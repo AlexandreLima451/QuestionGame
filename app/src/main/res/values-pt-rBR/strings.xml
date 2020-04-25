@@ -120,6 +120,9 @@
     <!-- Texto que mostra a raca do animal = Cavalo [CHAR LIMIT=50]-->
     <string name="animal_horse">"Cavalo"</string>
 
+    <!-- Texto que mostra a raca do animal = Avestruz [CHAR LIMIT=50]-->
+    <string name="animal_ostrich">"Avestruz"</string>
+
     <!-- Texto que mostra a raca do animal = Pinguim [CHAR LIMIT=50]-->
     <string name="animal_penguin">"Pinguim"</string>
 
@@ -254,5 +257,149 @@
 
     <!-- A resposta da maquina quando negar uma característica do animal [CHAR LIMIT=10]-->
     <string name="mach_negative_answer">Não!</string>
+
+    <!-- Descricao do botao que permite ao jogador escolher um animal [CHAR LIMIT=20]-->
+    <string name="answer_option">Responder !</string>
+
+    <!-- Descricao do botao que permite ao jogador fazer uma pergunta [CHAR LIMIT=20]-->
+    <string name="ask_option">Fazer uma pergunta</string>
+
+    <!-- Partida da maquina: introducao tipo 1 [CHAR LIMIT=50]-->
+    <string name="machine_match_intro1">Já escolhi um animal! Agora, o que vai fazer?</string>
+
+    <!-- Partida da maquina: introducao tipo 2 [CHAR LIMIT=50]-->
+    <string name="machine_match_intro2">Animal pensado, jogo iniciado! O que pretente fazer?</string>
+
+    <!-- Partida da maquina: introducao tipo 3 [CHAR LIMIT=50]-->
+    <string name="machine_match_intro3">Qual animal eu estou pensando?</string>
+
+    <!-- Partida da maquina: botao que retorna a partida [CHAR LIMIT=20]-->
+    <string name="back_button">Voltar</string>
+
+    <!-- Partida da maquina: botao que confirma a resposta [CHAR LIMIT=20]-->
+    <string name="choose_animal_button">O animal é esse!</string>
+
+    <!-- Maquina imprime essa resposta quando o jogador ja fez todas as perguntas possiveis [CHAR LIMIT=50]-->
+    <string name="no_questions_remain">Você já fez todas as perguntas possíveis…talvez você devesse tentar responder.</string>
+
+    <!-- Resposta positiva quando a maquina pensou no leao [CHAR LIMIT=50]-->
+    <string name="match_positive_lion">Acertou! Era no leão mesmo que estava pensando!</string>
+
+    <!-- Resposta positiva quando a maquina pensou no cavalo [CHAR LIMIT=50]-->
+    <string name="match_positive_horse">Cavalo! É você acertou!</string>
+
+    <!-- Resposta positiva quando a maquina pensou no avestruz [CHAR LIMIT=50]-->
+    <string name="match_positive_ostrich">Acertou! Avestruz é bom demais, não é?</string>
+
+    <!-- Resposta positiva quando a maquina pensou no pinguim [CHAR LIMIT=50]-->
+    <string name="match_positive_penguin">Cavaleiro, você acertou! Era o pinguim!</string>
+
+    <!-- Resposta positiva quando a maquina pensou no pato [CHAR LIMIT=50]-->
+    <string name="match_positive_duck">Qua, qua! Era o pato mesmo, parabéns!</string>
+
+    <!-- Resposta positiva quando a maquina pensou na tartargura [CHAR LIMIT=50]-->
+    <string name="match_positive_turtle">Acha que é a tartaruga mesmo? Bem, você acertou!</string>
+
+    <!-- Resposta positiva quando a maquina pensou no crocodilo [CHAR LIMIT=50]-->
+    <string name="match_positive_crocodile">Pensei no crocodilo e fiquei arrepiado! Mas bem, era ele mesmo!</string>
+
+    <!-- Resposta positiva quando a maquina pensou na baleia [CHAR LIMIT=50]-->
+    <string name="match_positive_whale">Bocê Bacertou! Baleia são baum de bais!</string>
+
+    <!-- Resposta positiva quando a maquina pensou no humano [CHAR LIMIT=50]-->
+    <string name="match_positive_human">Pensei em você mesmo! Olha, se você tivesse errado iria ficar feio, não acha?</string>
+
+    <!-- Resposta positiva quando a maquina pensou no morcego [CHAR LIMIT=50]-->
+    <string name="match_positive_bat">Se você diz que é morcego, então você está certo!</string>
+
+    <!-- Resposta positiva quando a maquina pensou no macaco [CHAR LIMIT=50]-->
+    <string name="match_positive_monkey">Acertou, pensei no macaco!</string>
+
+    <!-- Resposta positiva quando a maquina pensou na cobra [CHAR LIMIT=50]-->
+    <string name="match_positive_snake">Era a cobra, você acertousssss!</string>
+
+    <!-- Resposta positiva quando a maquina pensou na aguia [CHAR LIMIT=50]-->
+    <string name="match_positive_eagle">Acertou, caro jogador! Essa nem a águia iria acertar. He he</string>
+
+    <!-- Resposta negativa quando a maquina pensou no leao [CHAR LIMIT=50]-->
+    <string name="match_negative_lion">Não, não, não! Tinha pensado no leão!</string>
+
+    <!-- Resposta negativa quando a maquina pensou no cavalo [CHAR LIMIT=50]-->
+    <string name="match_negative_horse">Errou! Achei que você iria dizer cavalo, então pensei no cavalo!</string>
+
+    <!-- Resposta negativa quando a maquina pensou no avestruz [CHAR LIMIT=50]-->
+    <string name="match_negative_ostrich">Sinto em informar, mas não! O certo era avestruz.</string>
+
+    <!-- Resposta negativa quando a maquina pensou no pinguim [CHAR LIMIT=50]-->
+    <string name="match_negative_penguin">A resposta correta teria sido pinguim, cavaleiro!</string>
+
+    <!-- Resposta negativa quando a maquina pensou no pato [CHAR LIMIT=50]-->
+    <string name="match_negative_duck">Errou, a resposta correta seria pato. Qua, qua!</string>
+
+    <!-- Resposta negativa quando a maquina pensou na tartargura [CHAR LIMIT=50]-->
+    <string name="match_negative_turtle">Iiiih está lento como uma tartaruga..ops!</string>
+
+    <!-- Resposta negativa quando a maquina pensou no crocodilo [CHAR LIMIT=50]-->
+    <string name="match_negative_crocodile">Errou, teria acertado se tivesse dito crocodilo!</string>
+
+    <!-- Resposta negativa quando a maquina pensou na baleia [CHAR LIMIT=50]-->
+    <string name="match_negative_whale">Não, baleia é a resposta para tudo!</string>
+
+    <!-- Resposta negativa quando a maquina pensou no humano [CHAR LIMIT=50]-->
+    <string name="match_negative_human">O certo era dizer humano! Estava fácil essa. He he</string>
+
+    <!-- Resposta negativa quando a maquina pensou no morcego [CHAR LIMIT=50]-->
+    <string name="match_negative_bat">Não! E o morcego voou para longe..ops!</string>
+
+    <!-- Resposta negativa quando a maquina pensou no macaco [CHAR LIMIT=50]-->
+    <string name="match_negative_monkey">Chegou perto! Bem, se você acha isso parecido com um macaco…</string>
+
+    <!-- Resposta negativa quando a maquina pensou na cobra [CHAR LIMIT=50]-->
+    <string name="match_negative_snake">Cuidado com a cobra! Brincadeira a parte, está errado!</string>
+
+    <!-- Resposta negativa quando a maquina pensou na aguia [CHAR LIMIT=50]-->
+    <string name="match_negative_eagle">Não! Se você tivesse dito águia, teria acertado!</string>
+
+    <!-- Resposta neutra quando a máquina não pensou em nenhum animal, por algum motivo [CHAR LIMIT=50]-->
+    <string name="match_neutral_answer">Parando para pensar…acho que pensei em animal nenhum. Hehehe</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o leao [CHAR LIMIT=50]-->
+    <string name="player_answer_lion">Então, é o leão, isso?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o cavalo [CHAR LIMIT=50]-->
+    <string name="player_answer_horse">Você pensou no cavalo!</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o avestruz [CHAR LIMIT=50]-->
+    <string name="player_answer_ostrich">Seria o avestruz?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o pinguim [CHAR LIMIT=50]-->
+    <string name="player_answer_penguin">Pinguim, é você?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o pato [CHAR LIMIT=50]-->
+    <string name="player_answer_duck">A resposta certa é pato!</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi a tartaruga [CHAR LIMIT=50]-->
+    <string name="player_answer_turtle">O animal seria uma tartaruga?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o crocodilo [CHAR LIMIT=50]-->
+    <string name="player_answer_crocodile">É o crocodilo?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi a baleia [CHAR LIMIT=50]-->
+    <string name="player_answer_whale">Baleia, é isso?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o humano [CHAR LIMIT=50]-->
+    <string name="player_answer_human">Se parece comigo?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o morcego [CHAR LIMIT=50]-->
+    <string name="player_answer_bat">A resposta seria morcego, isso?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi o macaco [CHAR LIMIT=50]-->
+    <string name="player_answer_monkey">Deixa eu ver…macaco?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi a cobra [CHAR LIMIT=50]-->
+    <string name="player_answer_snake">Você pensou na cobra?</string>
+
+    <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi a aguia [CHAR LIMIT=50]-->
+    <string name="player_answer_eagle">Seria a águia?</string>
 
 </resources>

@@ -10,20 +10,28 @@ import com.example.android.question.R
 import com.example.android.question.model.QuestionModel
 import kotlinx.android.synthetic.main.question_list_item.view.*
 
-class QuestionAdapter (private val questions : List<QuestionModel>,
-                       private val context : Context, private val listener: AdapterListener) : Adapter<QuestionAdapter.ViewHolder>(){
+class QuestionAdapter (/*private val questions : List<QuestionModel>,
+                       */private val context : Context, private val listener: AdapterListener) : Adapter<QuestionAdapter.ViewHolder>(){
+
+
+    private var AdapterQuestions : MutableList<QuestionModel> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.question_list_item, parent, false)
         return ViewHolder(view)
     }
 
+    fun addQuestions(questions: MutableList<QuestionModel>) {
+        AdapterQuestions = questions as MutableList<QuestionModel>
+        notifyDataSetChanged()
+    }
+
     override fun getItemCount(): Int {
-        return questions.size
+        return AdapterQuestions.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val question = questions[position]
+        val question = AdapterQuestions[position]
         holder.bindView(question, listener, holder.adapterPosition)
     }
 

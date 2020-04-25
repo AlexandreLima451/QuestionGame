@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@android:color/black"
@@ -10,7 +11,7 @@
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingEnd="@dimen/activity_horizontal_margin"
     android:scrollbarThumbVertical="@android:color/white"
-    tools:context=".ActivityGameIntroPart2">
+    tools:context=".AnimalOptionListActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -28,32 +29,26 @@
         android:scrollbarThumbVertical="@android:color/white">
     </android.support.v7.widget.RecyclerView>
 
-    <!--<ListView
-        android:id="@+id/listview_animal"
-        android:background="@android:color/black"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
-        android:listSelector="@android:color/transparent"
-        android:scrollbarThumbVertical="@android:color/white"/>-->
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="8dp">
+        android:layout_weight="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
 
         <Button
-            android:id="@+id/btn_previous"
+            android:id="@+id/btn_back"
             style="@style/ConsoleAppButton"
-            android:text="@string/previous"
+            android:text="@string/back_button"
+            android:layout_centerVertical="true"
             android:layout_alignParentStart="true"/>
 
         <Button
-            android:id="@+id/btn_start_quiz"
+            android:id="@+id/btn_finish"
             style="@style/ConsoleAppButton"
-            android:text="@string/lets_go"
+            android:text="@string/choose_animal_button"
+            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
 
+    </RelativeLayout>
 </LinearLayout>

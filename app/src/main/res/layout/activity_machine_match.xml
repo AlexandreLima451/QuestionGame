@@ -71,7 +71,7 @@
             <Button
                 android:id="@+id/btn_answer"
                 style="@style/ConsoleAppButton"
-                android:text="Answer !"
+                android:text="@string/answer_option"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:layout_centerVertical="true"
@@ -80,7 +80,7 @@
             <Button
                 android:id="@+id/btn_ask_question"
                 style="@style/ConsoleAppButton"
-                android:text="Make a question"
+                android:text="@string/ask_option"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:layout_centerVertical="true"
