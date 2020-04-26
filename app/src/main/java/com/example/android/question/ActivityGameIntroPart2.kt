@@ -89,6 +89,7 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
     private fun previous(){
         val intent = Intent(this, ActivityGameIntroPart1::class.java)
         intent.putExtra("INTRO_MESSAGES", introduction)
+        intent.putExtra("MATCH_TYPE", matchType)
         startActivity(intent)
         finish()
     }

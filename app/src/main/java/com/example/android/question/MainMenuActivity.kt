@@ -20,7 +20,6 @@ class MainMenuActivity : AppCompatActivity() {
             val introPlayerGuessing = Introduction.newInstance()
             introPlayerGuessing.createMessage(this.getString(R.string.intro_player_guessing_message_1))
             introPlayerGuessing.createMessage(this.getString(R.string.intro_player_guessing_message_2))
-            introPlayerGuessing.createMessage(this.getString(R.string.intro_player_guessing_message_3))
             startPlayerTurnMode(applicationContext, introPlayerGuessing)
         }
 
@@ -28,7 +27,6 @@ class MainMenuActivity : AppCompatActivity() {
             val introMachineGuessing = Introduction.newInstance()
             introMachineGuessing.createMessage(this.getString(R.string.intro_machine_guessing_message_1))
             introMachineGuessing.createMessage(this.getString(R.string.intro_machine_guessing_message_2))
-            introMachineGuessing.createMessage(this.getString(R.string.intro_machine_guessing_message_3))
             startMachineTurnMode(applicationContext, introMachineGuessing)
         }
 

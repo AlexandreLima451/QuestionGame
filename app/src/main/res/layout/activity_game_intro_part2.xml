@@ -15,9 +15,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         style="@style/ConsoleAppDialog"
-        android:text="@string/animals_list_tittle"/>
+        android:text="@string/intro_player_guessing_message_3"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listview_animal"
@@ -25,7 +25,9 @@
         android:layout_height="0dp"
         android:layout_weight="8"
         android:orientation="vertical"
-        android:scrollbarThumbVertical="@android:color/white">
+        android:scrollbarThumbVertical="@android:color/white"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false">
     </android.support.v7.widget.RecyclerView>
 
     <!--<ListView

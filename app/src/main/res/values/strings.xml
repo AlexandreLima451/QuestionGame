@@ -401,4 +401,7 @@
     <!-- Text when the player ask if the animal chosen by the machine was an eagle [CHAR LIMIT=50]-->
     <string name="player_answer_eagle">Is it an eagle?</string>
 
+    <!-- Text when the player have to choose which animal the machine is thinking [CHAR LIMIT=50]-->
+    <string name="player_guessing_animal">So, which animal am I thinking?</string>
+
 </resources>

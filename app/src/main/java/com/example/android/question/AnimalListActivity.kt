@@ -41,5 +41,16 @@ class AnimalListActivity : AppCompatActivity() {
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         listview_animal.layoutManager = layoutManager
+
+        animal_list_back_button.setOnClickListener {
+            returnMatch()
+        }
+    }
+
+    /**
+     * This method returns to match
+     */
+    private fun returnMatch(){
+        finish()
     }
 }

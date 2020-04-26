@@ -402,4 +402,7 @@
     <!-- Texto quando usuário pergunta se o animal escolhido pela maquina foi a aguia [CHAR LIMIT=50]-->
     <string name="player_answer_eagle">Seria a águia?</string>
 
+    <!-- Texto quando usuário devera escolhar o animal que a maquina está pensando [CHAR LIMIT=50]-->
+    <string name="player_guessing_animal">Então, qual animal eu estou pensando?</string>
+
 </resources>
