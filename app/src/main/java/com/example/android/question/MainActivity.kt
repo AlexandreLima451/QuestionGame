@@ -1,5 +1,5 @@
 /***
- * QuestionModel Game!
+ * Animal Game!
  *
  * App developed by
  * @author Alexandre Lima
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
      * This method starts the game
      * */
     private fun startGame(){
-        val intent = Intent(applicationContext, ActivityGameIntroPart1::class.java)
+        val intent = Intent(applicationContext, MainMenuActivity::class.java)
         startActivity(intent)
         finish()
     }

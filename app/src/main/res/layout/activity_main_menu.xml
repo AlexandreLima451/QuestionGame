@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenuActivity"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:text="@string/game_title"
+        android:fontFamily="@font/windows_command_prompt"
+        android:textColor="@android:color/white"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textSize="48sp"/>
+
+    <Button
+        android:id="@+id/btn_players_turn_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ConsoleAppButton"
+        android:layout_weight="1"
+        android:text="@string/player_turn_mode"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_machine_turn_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ConsoleAppButton"
+        android:layout_weight="1"
+        android:text="@string/machine_turn_mode"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_versus_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ConsoleAppButton"
+        android:layout_weight="1"
+        android:text="@string/versus_mode"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

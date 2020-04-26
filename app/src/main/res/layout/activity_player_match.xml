@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityGameQuestions"
+    tools:context=".PlayerMatchActivity"
     android:background="@android:color/black">
 
     <LinearLayout
@@ -14,12 +14,20 @@
         android:layout_weight="0"
         android:orientation="horizontal">
 
+        <ImageButton
+            android:id="@+id/btn_img_machine_face"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/happy"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/btn_img_animals_list" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:gravity="center"
-            android:text="0 X 0"
-            style="@style/ConsoleAppDialog"/>
+            android:text="@string/machine_hint1"
+            style="@style/ConsoleAppSimpleText"/>
 
         <ImageButton
             android:id="@+id/btn_img_animals_list"

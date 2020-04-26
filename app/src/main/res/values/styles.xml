@@ -45,6 +45,67 @@
         <item name="android:background">@android:color/white</item>
         <item name="android:fontFamily">@font/windows_command_prompt</item>
         <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <!-- Style for activities. It removes the animation between activities -->
+    <style name="ConsoleTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:theme">@style/Theme.AppCompat.NoActionBar</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Style for list's item when NOT selected -->
+    <style name="AnimalItemUnselected">
+        <item name="android:background">@android:color/black</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Style for list's item when selected -->
+    <style name="AnimalItemSelected">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Style for list's item (description) - unmarked -->
+    <style name="ConsoleItemUnselectedSimpleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/windows_command_prompt</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Style for list's item (tittle) - unmarked -->
+    <style name="ConsoleItemUnselectedLargeText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/windows_command_prompt</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Style for list's item (description) - marked -->
+    <style name="ConsoleItemSelectedSimpleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/windows_command_prompt</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- Style for list's item (tittle) - marked -->
+    <style name="ConsoleItemSelectedLargeText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/windows_command_prompt</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
 </resources>

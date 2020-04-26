@@ -1,14 +1,16 @@
 package com.example.android.question.model
 
+import java.io.Serializable
+
 open class Animal (var breed : String?,
                    var isMammal : Boolean,
                    var isQuadruped : Boolean,
                    var isCarnivore : Boolean,
                    var isHerbivore : Boolean,
                    var isFlying : Boolean,
-                   var hasFins : Boolean){
+                   var hasFins : Boolean) : Serializable{
 
-    override operator fun equals(other: Any?): Boolean {
+    override fun equals(other: Any?): Boolean {
         val anotherAnimal = other as Animal
 
         if(this.isMammal != anotherAnimal.isMammal){ return false }

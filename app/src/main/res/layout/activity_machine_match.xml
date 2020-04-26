@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MachineMatchActivity"
+    android:orientation="vertical"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_img_machine_face"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/happy"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/btn_img_animals_list" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="@string/machine_hint1"
+            style="@style/ConsoleAppSimpleText"/>
+
+        <ImageButton
+            android:id="@+id/btn_img_animals_list"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_duck"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/btn_img_animals_list" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/txt_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="10"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarThumbVertical="@android:color/white">
+    </ListView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/question_list"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/rel_lyt_ask_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <Button
+                android:id="@+id/btn_answer"
+                style="@style/ConsoleAppButton"
+                android:text="@string/answer_option"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <Button
+                android:id="@+id/btn_ask_question"
+                style="@style/ConsoleAppButton"
+                android:text="@string/ask_option"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+            <Button
+                android:id="@+id/btn_reset"
+                style="@style/ConsoleAppButton"
+                android:text="@string/option_reset"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

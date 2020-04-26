@@ -27,6 +27,15 @@ abstract class Questions {
 
             return mutableMapOf( "FLYING"    to flying, "FINS"      to fins)
         }
+
+        fun loadAllQuestions() : MutableMap<String, QuestionModel>{
+            return mutableMapOf( "MAMMAL"    to mammal,
+                                "QUADRUPED" to quadruped,
+                                "CARNIVORE" to carnivore,
+                                "HERBIVORE" to herbivore,
+                                "FLYING"    to flying,
+                                "FINS"      to fins)
+        }
     }
 
 }

@@ -1,3 +1,5 @@
 package com.example.android.question.model
 
-data class ResultModel (var animal : Animal, var resultText : String)
+import java.io.Serializable
+
+data class ResultModel (var animal : Animal, var resultText : String) : Serializable

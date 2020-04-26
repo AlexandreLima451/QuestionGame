@@ -4,18 +4,18 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_game_questions.*
-import com.example.android.question.model.Match
+import kotlinx.android.synthetic.main.activity_player_match.*
+import com.example.android.question.model.PlayerMatch
 import com.example.android.question.model.Message
-import com.example.android.question.model.MessageAdapter
+import com.example.android.question.model.adapter.MessageAdapter
 
 /**
  * This class handles with the game's logic
  */
 
-class ActivityGameQuestions : AppCompatActivity() {
+class PlayerMatchActivity : AppCompatActivity() {
 
-    private var match = Match()
+    private var match = PlayerMatch(this)
     private var messageMutableList = mutableListOf<Message>()
     private var messageAdapter : MessageAdapter? = null
     private var player1Description = ""
@@ -23,7 +23,7 @@ class ActivityGameQuestions : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_questions)
+        setContentView(R.layout.activity_player_match)
 
         messageMutableList = mutableListOf()
         messageAdapter = MessageAdapter(context = this, objects = messageMutableList)

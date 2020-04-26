@@ -26,20 +26,32 @@
     <!--Text present in button that initiates another match [CHAR LIMIT=20]-->
     <string name="option_reset">Try Again!</string>
 
-    <!-- Computer's Introduction - Part 1 [CHAR LIMIT=150]-->
-    <string name="intro_text_1">"Hi, human! I'm a very smart computer, and I have heard that you are smart too. So, I decided to challenge you for a game. ;)"</string>
+    <!-- Computer's Introduction - Part 1 (Player Guessing's Mode) [CHAR LIMIT=150]-->
+    <string name="intro_player_guessing_message_1">"Hi, human! I'm a very smart computer, and I have heard that you are smart too. So, I decided to challenge you for a game. ;)"</string>
 
-    <!-- Computer's Introduction - Part 2 [CHAR LIMIT=180]-->
-    <string name="intro_text_2">You\'ll have to think an animal according the list I\'ll show you, and then I\'ll make some questions. Based on your answers, I\'ll figure out which animal you chose. He he</string>
+    <!-- Computer's Introduction - Part 2 (Player Guessing's Mode) [CHAR LIMIT=180]-->
+    <string name="intro_player_guessing_message_2">You\'ll have to think an animal according the list I\'ll show you, and then I\'ll make some questions. Based on your answers, I\'ll figure out which animal you chose. He he</string>
 
-    <!-- Computer's Introduction - Part 3 [CHAR LIMIT=70]-->
-    <string name="intro_text_3">Sounds easy, don\'t you think? Now, check the following list:</string>
+    <!-- Computer's Introduction - Part 3 (Player Guessing's Mode) [CHAR LIMIT=70]-->
+    <string name="intro_player_guessing_message_3">Sounds easy, don\'t you think? Now, check the following list:</string>
 
-    <!-- Computer's Introduction - Part 4 [CHAR LIMIT=255]-->
-    <string name="intro_text_4">"A Lion, a horse, a human (you, I suppose), a monkey (someone like you, I guess), a bat, a whale, an ostrich, a penguin, a duck (my favorite), an eagle, a turtle, a crocodile and, last but not least, a snake (something like S)!"</string>
+    <!-- Computer's Introduction - Part 4 (Player Guessing's Mode) [CHAR LIMIT=255]-->
+    <string name="intro_player_guessing_message_4">"A Lion, a horse, a human (you, I suppose), a monkey (someone like you, I guess), a bat, a whale, an ostrich, a penguin, a duck (my favorite), an eagle, a turtle, a crocodile and, last but not least, a snake (something like S)!"</string>
 
-    <!-- Computer's Introduction - Part 5 [CHAR LIMIT=25]-->
-    <string name="intro_text_5">"Are you ready?"</string>
+    <!-- Computer's Introduction - Part 5 (Player Guessing's Mode) [CHAR LIMIT=25]-->
+    <string name="intro_player_guessing_message_5">"Are you ready?"</string>
+
+    <!-- Computer's Introduction - Part 1 (Machine Guessing's Mode) [CHAR LIMIT=150]-->
+    <string name="intro_machine_guessing_message_1">"Hi, my favorite human! I'm a very creative computer, and I have heard that you are good in games. So, I decided to challenge you for a one. ;)"</string>
+
+    <!-- Computer's Introduction - Part 2 (Machine Guessing's Mode) [CHAR LIMIT=180]-->
+    <string name="intro_machine_guessing_message_2">It\'s time to I think an animal while you try to figure out which I chose. He he</string>
+
+    <!-- Computer's Introduction - Part 3 (Machine Guessing's Mode) [CHAR LIMIT=70]-->
+    <string name="intro_machine_guessing_message_3">Sounds easy, don\'t you think? Now, check the following list:</string>
+
+    <!-- Computer's Introduction - Part 4 (Machine Guessing's Mode) [CHAR LIMIT=25]-->
+    <string name="intro_machine_guessing_message_4">"Are you ready?"</string>
 
     <!-- Text of the first question [CHAR LIMIT=50]-->
     <string name="question_mammal">"Is the animal a mammal?"</string>
@@ -106,6 +118,9 @@
 
     <!-- Text that shows the animal's breed = Horse [CHAR LIMIT=50]-->
     <string name="animal_horse">"Horse"</string>
+
+    <!-- Text that shows the animal's breed = Ostrich [CHAR LIMIT=50]-->
+    <string name="animal_ostrich">"Ostrich"</string>
 
     <!-- Text that shows the animal's breed = Penguin [CHAR LIMIT=50]-->
     <string name="animal_penguin">"Penguin"</string>
@@ -190,5 +205,203 @@
 
     <!-- The Tittle of the Animals' List [CHAR LIMIT=100]-->
     <string name="animals_list_tittle">Let\'s check our animals below:</string>
+
+    <!-- Mode that the machine try to guess which animal was chosen by the player [CHAR LIMIT=20]-->
+    <string name="player_turn_mode">Player\'s Turn</string>
+
+    <!-- Mode that the player try to guess which animal was chosen by the player [CHAR LIMIT=20]-->
+    <string name="machine_turn_mode">My Turn</string>
+
+    <!-- Versus Mode [CHAR LIMIT=20]-->
+    <string name="versus_mode">Versus Mode</string>
+
+    <!-- Hint given by the machine (at Machine Guessing's Mode) [CHAR LIMIT=50]-->
+    <string name="machine_hint1">Click on the duck to see the animal list</string>
+
+    <!-- The player ask if the animal is a mammal [CHAR LIMIT=20]-->
+    <string name="opt_quest_mammal">"Is it a mammal?"</string>
+
+    <!-- The player ask if the animal is quadruped [CHAR LIMIT=20]-->
+    <string name="opt_quest_quadruped">"Is it a quadruped?"</string>
+
+    <!-- The player ask if the animal is carnivore [CHAR LIMIT=20]-->
+    <string name="opt_quest_carnivore">"Is it a carnivore?"</string>
+
+    <!-- The player ask if the animal is herbivore [CHAR LIMIT=20]-->
+    <string name="opt_quest_herbivore">"Is it a herbivore?"</string>
+
+    <!-- The player ask if the animal has fins [CHAR LIMIT=20]-->
+    <string name="opt_quest_fins">"Does it have fins?"</string>
+
+    <!-- The player ask if the animal can fly [CHAR LIMIT=20]-->
+    <string name="opt_quest_flying">"Can it fly?"</string>
+
+    <!-- The machine confirms that animal is a mammal [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_mammal">Yes! It is a beautiful mammal!</string>
+
+    <!-- The machine confirms that animal is a herbivore [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_herbivore">Yes! It is a herbivore!</string>
+
+    <!-- The machine confirms that animal is a quadruped [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_quadruped">Yes! It is a quadruped, like the lion…</string>
+
+    <!-- The machine confirms that animal is a carnivore [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_carnivore">Yes! It likes meat.</string>
+
+    <!-- The machine confirms that animal has fins [CHAR LIMIT=20]-->
+    <string name="answer_animal_has_fins">Yes! It has fins like a fish. :)</string>
+
+    <!-- The machine confirms that animal is a flying [CHAR LIMIT=20]-->
+    <string name="answer_animal_is_flying">Yes! It is a flying!</string>
+
+    <!-- The machine's answer when it denies the animal's characteristic [CHAR LIMIT=10]-->
+    <string name="mach_negative_answer">Nop!</string>
+
+    <!-- Button's description that allows the player chooses an animal [CHAR LIMIT=20]-->
+    <string name="answer_option">Answer !</string>
+
+    <!-- Button's description that allows player to ask a question [CHAR LIMIT=20]-->
+    <string name="ask_option">Ask a question</string>
+
+    <!-- Machine's Match: introduction 1 [CHAR LIMIT=50]-->
+    <string name="machine_match_intro1">I already chose an animal! Now, what are you going to do?</string>
+
+    <!-- Machine's Match: introduction 2 [CHAR LIMIT=50]-->
+    <string name="machine_match_intro2">Animal chosen, game started! What should you do?</string>
+
+    <!-- Machine's Match: introduction 3 [CHAR LIMIT=50]-->
+    <string name="machine_match_intro3">What animal am I thinking?</string>
+
+    <!-- Machine's Match: button that returns to match [CHAR LIMIT=20]-->
+    <string name="back_button">Back</string>
+
+    <!-- Machine's Match: button that confirms the answer [CHAR LIMIT=20]-->
+    <string name="choose_animal_button">This is the animal!</string>
+
+    <!-- Machine prints this answer when the player already asked all questions [CHAR LIMIT=50]-->
+    <string name="no_questions_remain">You already asked all questions available…maybe you should try it.</string>
+
+    <!-- This is the correct answer when machine chose a lion [CHAR LIMIT=50]-->
+    <string name="match_positive_lion">You are right! I was thinking about the lion!</string>
+
+    <!-- This is the correct answer when machine chose a horse [CHAR LIMIT=50]-->
+    <string name="match_positive_horse">Dear horse! You are right!</string>
+
+    <!-- This is the correct answer when machine chose an ostrich [CHAR LIMIT=50]-->
+    <string name="match_positive_ostrich">You are right! Ostrich are very nice, aren\'t they?</string>
+
+    <!-- This is the correct answer when machine chose a penguin [CHAR LIMIT=50]-->
+    <string name="match_positive_penguin">Gentleman, you are right! It was the penguin!!</string>
+
+    <!-- This is the correct answer when machine chose a duck [CHAR LIMIT=50]-->
+    <string name="match_positive_duck">Qua, qua! It was a duck, congratulations!</string>
+
+    <!-- This is the correct answer when machine chose turtle [CHAR LIMIT=50]-->
+    <string name="match_positive_turtle">Do you think that is a turtle? Well, you are right!</string>
+
+    <!-- This is the correct answer when machine chose a crocodile [CHAR LIMIT=50]-->
+    <string name="match_positive_crocodile">I thought about the crocodile and I got goose bumps! But well, you are right!</string>
+
+    <!-- This is the correct answer when machine chose a whale [CHAR LIMIT=50]-->
+    <string name="match_positive_whale">You are right! Whale are very nice!</string>
+
+    <!-- This is the correct answer when machine chose a human [CHAR LIMIT=50]-->
+    <string name="match_positive_human">I really thought about you! Look, if you were wrong it would be a mess, wouldn\'t it?</string>
+
+    <!-- This is the correct answer when machine chose a bat [CHAR LIMIT=50]-->
+    <string name="match_positive_bat">If you say bat, so you are right!</string>
+
+    <!-- This is the correct answer when machine chose a monkey [CHAR LIMIT=50]-->
+    <string name="match_positive_monkey">You are right, I thought about monkey!</string>
+
+    <!-- This is the correct answer when machine chose a snake [CHAR LIMIT=50]-->
+    <string name="match_positive_snake">It was a snake, you are right! SsSsSs</string>
+
+    <!-- This is the correct answer when machine chose an eagle [CHAR LIMIT=50]-->
+    <string name="match_positive_eagle">You are right, darling! That even an eagle wouldn\'t get it. He he</string>
+
+    <!-- This is the negative answer when machine chose a lion [CHAR LIMIT=50]-->
+    <string name="match_negative_lion">No, no, no! I thought about lion!</string>
+
+    <!-- This is the negative answer when machine chose a horse [CHAR LIMIT=50]-->
+    <string name="match_negative_horse">You are wrong! I thought you would say horse, so I thought about horse!</string>
+
+    <!-- This is the negative answer when machine chose an ostrich [CHAR LIMIT=50]-->
+    <string name="match_negative_ostrich">I\'m sorry to say that, but you are wrong! Ostrich is the right choice.</string>
+
+    <!-- This is the negative answer when machine chose a penguin [CHAR LIMIT=50]-->
+    <string name="match_negative_penguin">The correct answer is penguin, sir!!</string>
+
+    <!-- This is the negative answer when machine chose a duck [CHAR LIMIT=50]-->
+    <string name="match_negative_duck">It\'s wrong, the correct answer is duck. Qua, qua!</string>
+
+    <!-- This is the negative answer when machine chose a turtle [CHAR LIMIT=50]-->
+    <string name="match_negative_turtle">Iiiih you are too slow, like a turtle..ops!</string>
+
+    <!-- This is the negative answer when machine chose a crocodile [CHAR LIMIT=50]-->
+    <string name="match_negative_crocodile">You are wrong, you would be right if you chose crocodile!</string>
+
+    <!-- This is the negative answer when machine chose a whale [CHAR LIMIT=50]-->
+    <string name="match_negative_whale">No, whale is the answer for everything!</string>
+
+    <!-- This is the negative answer when machine chose a human [CHAR LIMIT=50]-->
+    <string name="match_negative_human">The correct answer is human! That was easy. He he</string>
+
+    <!-- This is the negative answer when machine chose a bat [CHAR LIMIT=50]-->
+    <string name="match_negative_bat">No! And the bat flies away..ops!</string>
+
+    <!-- This is the negative answer when machine chose a monkey [CHAR LIMIT=50]-->
+    <string name="match_negative_monkey">That was close! Well, at least that you think monket is similar to that…</string>
+
+    <!-- This is the negative answer when machine chose a snake [CHAR LIMIT=50]-->
+    <string name="match_negative_snake">Watch out the snake! Sorry about that, but you are wrong!</string>
+
+    <!-- This is the negative answer when machine chose an eagle [CHAR LIMIT=50]-->
+    <string name="match_negative_eagle">No! If you said eagle, you would be right!</string>
+
+    <!-- Neutral answer when the machine didn't think about an animal, for some reason [CHAR LIMIT=50]-->
+    <string name="match_neutral_answer">Stop to thinking… I believe that I didn\'t choose any animal. Hehehe</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a lion [CHAR LIMIT=50]-->
+    <string name="player_answer_lion">So, it is a lion, isn\'t it?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a horse [CHAR LIMIT=50]-->
+    <string name="player_answer_horse">You thought about a horse!</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was an ostrich [CHAR LIMIT=50]-->
+    <string name="player_answer_ostrich">Is it an ostrich?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a penguin [CHAR LIMIT=50]-->
+    <string name="player_answer_penguin">Penguin, is that you?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a duck [CHAR LIMIT=50]-->
+    <string name="player_answer_duck">The duck is the right answer!</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a turtle [CHAR LIMIT=50]-->
+    <string name="player_answer_turtle">Would be the animal a turtle?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a crocodile [CHAR LIMIT=50]-->
+    <string name="player_answer_crocodile">Is it a crocodile?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a whale [CHAR LIMIT=50]-->
+    <string name="player_answer_whale">Whale, right?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a human [CHAR LIMIT=50]-->
+    <string name="player_answer_human">Does it look like me?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a bat [CHAR LIMIT=50]-->
+    <string name="player_answer_bat">The correct answer is bat, right?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a monkey [CHAR LIMIT=50]-->
+    <string name="player_answer_monkey">Let me see…monkey?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was a snake [CHAR LIMIT=50]-->
+    <string name="player_answer_snake">Did you think about snake?</string>
+
+    <!-- Text when the player ask if the animal chosen by the machine was an eagle [CHAR LIMIT=50]-->
+    <string name="player_answer_eagle">Is it an eagle?</string>
+
+    <!-- Text when the player have to choose which animal the machine is thinking [CHAR LIMIT=50]-->
+    <string name="player_guessing_animal">So, which animal am I thinking?</string>
 
 </resources>
