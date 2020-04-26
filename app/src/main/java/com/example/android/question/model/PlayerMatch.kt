@@ -2,6 +2,8 @@ package com.example.android.question.model
 
 import android.content.Context
 import com.example.android.question.R
+import com.example.android.question.model.domain.Animals
+import com.example.android.question.model.domain.Questions
 import java.util.*
 
 /**
@@ -15,16 +17,20 @@ class PlayerMatch(context: Context) {
     private var questions : MutableMap<String, QuestionModel> = hashMapOf()
     private var results : MutableMap<String, ResultModel> = hashMapOf()
     private var finalResult = ResultModel(Animals.none, "")
+    private var isMatchRunning = false
+    private var totalQuestions = 0
 
     /**
      * This method initializes the match
      * */
     fun init(){
         questions = Questions.loadMainQuestions()
+        totalQuestions = Questions.loadAllQuestions().size
         results = loadResults()
         loadQuestion()
         currentAnswer = false
         finalResult = ResultModel(Animals.none, "")
+        isMatchRunning = true
     }
 
     /**
@@ -93,7 +99,9 @@ class PlayerMatch(context: Context) {
                 applicationContext.resources.getString(R.string.answer_none)) }
         val finalText = finalResult.resultText
         questions.clear()
+        totalQuestions = 0
         results.clear()
+        isMatchRunning = false
         return finalText
     }
 
@@ -121,6 +129,7 @@ class PlayerMatch(context: Context) {
         currentQuestion.text = questMap.value.text
 
         questions.remove(questMap.key) // remove item to not repeat the question again
+        totalQuestions -= 1
         return true
     }
 
@@ -142,5 +151,17 @@ class PlayerMatch(context: Context) {
     private fun getRandomly(): MutableMap.MutableEntry <String, QuestionModel> {
         val random = Random()
         return questions.entries.elementAt(random.nextInt(questions.size))
+    }
+
+    /**
+     * This method gets the status of the match
+     * @return true if the match still running
+     */
+    fun getIsMatchRunning() : Boolean{
+        return isMatchRunning
+    }
+
+    fun getQuantityOfQuestions(): Int {
+        return totalQuestions
     }
 }

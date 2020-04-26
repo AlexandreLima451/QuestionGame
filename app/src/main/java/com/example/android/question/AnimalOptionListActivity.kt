@@ -7,8 +7,12 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.example.android.question.model.*
-import com.example.android.question.model.adapter.AnimalItemAdapter
-import com.example.android.question.model.adapter.AnimalItemClick
+import com.example.android.question.model.domain.Animal
+import com.example.android.question.model.domain.Animals
+import com.example.android.question.model.domain.Results
+import com.example.android.question.model.list.adapter.AnimalItemAdapter
+import com.example.android.question.model.list.adapter.AnimalItemClick
+import com.example.android.question.model.list.item.AnimalItem
 import kotlinx.android.synthetic.main.activity_animal_list.listview_animal
 import kotlinx.android.synthetic.main.activity_animal_option_list.*
 

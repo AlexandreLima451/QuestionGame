@@ -1,4 +1,6 @@
-package com.example.android.question.model
+package com.example.android.question.model.domain
+
+import com.example.android.question.model.ResultModel
 
 abstract class Results {
 

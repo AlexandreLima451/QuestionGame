@@ -1,6 +1,7 @@
-package com.example.android.question.model
+package com.example.android.question.model.domain
 
 import com.example.android.question.R
+import com.example.android.question.model.QuestionModel
 import com.example.android.question.util.MainApplication
 
 abstract class Questions {

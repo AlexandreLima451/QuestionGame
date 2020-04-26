@@ -1,4 +1,6 @@
-package com.example.android.question.model
+package com.example.android.question.model.list.item
+
+import com.example.android.question.model.domain.Animal
 
 data class AnimalItem(val animalImage: Int,
                       val animalBreed: Int,

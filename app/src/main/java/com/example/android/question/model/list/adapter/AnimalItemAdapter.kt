@@ -1,4 +1,4 @@
-package com.example.android.question.model.adapter
+package com.example.android.question.model.list.adapter
 
 import android.content.Context
 import android.graphics.Color
@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.android.question.R
-import com.example.android.question.model.AnimalItem
+import com.example.android.question.model.list.item.AnimalItem
 import kotlinx.android.synthetic.main.animal_list_item.view.*
 
 class AnimalItemAdapter (private val animals : List<AnimalItem>,

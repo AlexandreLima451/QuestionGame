@@ -6,9 +6,10 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.example.android.question.model.*
-import com.example.android.question.model.adapter.MessageAdapter
-import com.example.android.question.model.adapter.QuestionAdapter
-import com.example.android.question.model.adapter.AdapterListener
+import com.example.android.question.model.list.adapter.MessageAdapter
+import com.example.android.question.model.list.adapter.QuestionAdapter
+import com.example.android.question.model.list.adapter.AdapterListener
+import com.example.android.question.model.list.item.Message
 import kotlinx.android.synthetic.main.activity_machine_match.*
 import kotlinx.android.synthetic.main.activity_machine_match.btn_img_animals_list
 import kotlinx.android.synthetic.main.activity_machine_match.txt_dialog

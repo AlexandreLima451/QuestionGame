@@ -2,6 +2,9 @@ package com.example.android.question.model
 
 import android.content.Context
 import com.example.android.question.R
+import com.example.android.question.model.domain.Animal
+import com.example.android.question.model.domain.Animals
+import com.example.android.question.model.domain.Results
 import kotlin.random.Random
 
 /**
@@ -12,6 +15,7 @@ class MachineMatch (context: Context) {
     private var questions : MutableList<QuestionModel> = mutableListOf()
     var chosenAnimal = Animals.none
     private val applicationContext = context
+    private var isMatchRunning = false
 
     /**
      * This method initializes the match
@@ -19,6 +23,7 @@ class MachineMatch (context: Context) {
     fun init(){
         chosenAnimal = Animals.randomAnimal()
         questions = loadQuestions()
+        isMatchRunning = true
     }
 
     /**
@@ -128,6 +133,7 @@ class MachineMatch (context: Context) {
     fun finish(result : ResultModel?) : String {
         val finalText=  validateAnswer(result)
         questions.clear()
+        isMatchRunning = false
         return finalText
     }
 
@@ -218,6 +224,14 @@ class MachineMatch (context: Context) {
             3 -> introMachineText = applicationContext.getString(R.string.machine_match_intro3)
         }
         return introMachineText
+    }
+
+    /**
+     * This method gets the status of the match
+     * @return true if the match still running
+     */
+    fun getIsMatchRunning() : Boolean{
+        return isMatchRunning
     }
 }
 

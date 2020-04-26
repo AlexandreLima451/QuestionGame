@@ -1,4 +1,4 @@
-package com.example.android.question.model.adapter
+package com.example.android.question.model.list.adapter
 
 import android.content.Context
 import android.view.Gravity
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.android.question.R
-import com.example.android.question.model.Message
+import com.example.android.question.model.list.item.Message
 
 class MessageAdapter(context: Context, resource: Int, objects: MutableList<Message>) : ArrayAdapter<Message>(context, resource, objects) {
 

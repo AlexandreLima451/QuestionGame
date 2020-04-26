@@ -4,9 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import com.example.android.question.model.AnimalItem
-import com.example.android.question.model.adapter.AnimalItemAdapter
-import com.example.android.question.model.adapter.AnimalItemClick
+import com.example.android.question.model.list.item.AnimalItem
+import com.example.android.question.model.list.adapter.AnimalItemAdapter
+import com.example.android.question.model.list.adapter.AnimalItemClick
 import kotlinx.android.synthetic.main.activity_animal_list.*
 
 class AnimalListActivity : AppCompatActivity() {

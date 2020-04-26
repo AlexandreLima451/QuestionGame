@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_player_match.*
 import com.example.android.question.model.PlayerMatch
-import com.example.android.question.model.Message
-import com.example.android.question.model.adapter.MessageAdapter
+import com.example.android.question.model.list.item.Message
+import com.example.android.question.model.list.adapter.MessageAdapter
 
 /**
  * This class handles with the game's logic
@@ -59,8 +59,8 @@ class PlayerMatchActivity : AppCompatActivity() {
 
     private fun showPlayer1Text(answerPlayer1: String){
         messageMutableList.add(Message(senderName = player1Description,
-                                       content = answerPlayer1,
-                                       isThePlayer = false))
+                content = answerPlayer1,
+                isThePlayer = false))
 
         messageAdapter?.notifyDataSetChanged()
         scrollingDialog()

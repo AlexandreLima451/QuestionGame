@@ -1,4 +1,4 @@
-package com.example.android.question.model.adapter
+package com.example.android.question.model.list.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
