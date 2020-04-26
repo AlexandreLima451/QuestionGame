@@ -53,6 +53,21 @@
     <!-- Computer's Introduction - Part 4 (Machine Guessing's Mode) [CHAR LIMIT=25]-->
     <string name="intro_machine_guessing_message_4">"Are you ready?"</string>
 
+    <!-- Computer's Introduction - Part 1 (Versus' Mode) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message1">Hi, darling! Here I will challenge you for a guessing game, however we have here some rules!</string>
+
+    <!-- Computer's Introduction - Part 2 (Versus' Mode) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message2">Every match, we start with 8 points, that will decrease as we ask new questions for each other.</string>
+
+    <!-- Computer's Introduction - Part 3 (Versus' Mode) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message3">A new question decreases one point, so the minimum point that will award for each correct answer is two points.</string>
+
+    <!-- Computer's Introduction - Part 4 (Versus' Mode) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message4">If one of us doesn\'t figure out which animal was thought, no points will be scored. If we don\'t think about any animal of the list, the adversary will score one point.</string>
+
+    <!-- Computer's Introduction - Part 5 (Versus' Mode) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message5">Sounds complicated, doesn\'t it? I know, a little confusing, but it will be fun!</string>
+
     <!-- Text of the first question [CHAR LIMIT=50]-->
     <string name="question_mammal">"Is the animal a mammal?"</string>
 

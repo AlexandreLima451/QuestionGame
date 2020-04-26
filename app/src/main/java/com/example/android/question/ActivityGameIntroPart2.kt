@@ -20,6 +20,7 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
     private var matchType : Int = 0
     private val PLAYER_GUESSING = 1
     private val MACHINE_GUESSING = 2
+    private val VERSUS_MODE = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +59,7 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
         btn_start_quiz.setOnClickListener {
             if (matchType == this.PLAYER_GUESSING) startPlayerMatch()
             if (matchType == this.MACHINE_GUESSING) startMachineMatch()
+            if (matchType == this.VERSUS_MODE) startMachineMatch()
         }
 
         btn_previous.setOnClickListener {

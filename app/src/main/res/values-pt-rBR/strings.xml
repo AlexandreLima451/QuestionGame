@@ -42,17 +42,32 @@
     <!-- Introducao da Maquina - Parte 5  (Modo do Jogador) [CHAR LIMIT=25]-->
     <string name="intro_player_guessing_message_5">Você está preparado?</string>
 
-    <!-- Introducao da Maquina - Part 1 (Modo da Máquina) [CHAR LIMIT=150]-->
+    <!-- Introducao da Maquina - Parte 1 (Modo da Máquina) [CHAR LIMIT=150]-->
     <string name="intro_machine_guessing_message_1">"Olá, meu humano favorito! Eu sou um computador muito criativo, e eu tenho escutado que você é bom em jogos. Então, eu decidi desafiá-lo para um jogo. ;)"</string>
 
-    <!-- Introducao da Maquina - Part 2 (Modo da Máquina) [CHAR LIMIT=180]-->
+    <!-- Introducao da Maquina - Parte 2 (Modo da Máquina) [CHAR LIMIT=180]-->
     <string name="intro_machine_guessing_message_2">É a hora de eu pensar num animal enquanto você tenta adivinhar qual eu escolhi. He he</string>
 
-    <!-- Introducao da Maquina - Part 3 (Modo da Máquina) [CHAR LIMIT=70]-->
+    <!-- Introducao da Maquina - Parte 3 (Modo da Máquina) [CHAR LIMIT=70]-->
     <string name="intro_machine_guessing_message_3">Parece fácil, não acha? Agora, confira a lista a seguir:</string>
 
-    <!-- Introducao da Maquina - Part 4 (Modo da Máquina) [CHAR LIMIT=25]-->
+    <!-- Introducao da Maquina - Parte 4 (Modo da Máquina) [CHAR LIMIT=25]-->
     <string name="intro_machine_guessing_message_4">"Você está pronto?"</string>
+
+    <!-- Introducao da Maquina - Parte 1 (Modo Versus) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message1">Olá queridos e queridas! Aqui irei te desafiar para um jogo de adivinhação, no entanto com algumas regras!</string>
+
+    <!-- Introducao da Maquina - Parte 2 (Modo Versus) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message2">A cada partida, a gente começa com 8 pontos, que serão descontados a medida que fizermos novas perguntas.</string>
+
+    <!-- Introducao da Maquina - Parte 3 (Modo Versus) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message3">Uma pergunta diminui um ponto, então a pontuação mínima que poderá fazer a cada acerto é de dois pontos.</string>
+
+    <!-- Introducao da Maquina - Parte 4 (Modo Versus) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message4"> Se um de nós não adivinharmos o animal pensado, nenhum ponto será marcado. Se nós não pensarmos em nenhum animal da lista, o adversário marcará um ponto.</string>
+
+    <!-- Introducao da Maquina - Parte 5 (Modo Versus) [CHAR LIMIT=180]-->
+    <string name="intro_versus_mode_message5">Parece complicado, não? Eu sei, um pouco confuso, mas será divertido!</string>
 
     <!-- Texto da primeira questao [CHAR LIMIT=50]-->
     <string name="question_mammal">O animal é um mamífero?</string>
