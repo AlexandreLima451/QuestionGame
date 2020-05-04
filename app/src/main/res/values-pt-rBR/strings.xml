@@ -420,4 +420,6 @@
     <!-- Texto quando usuário devera escolhar o animal que a maquina está pensando [CHAR LIMIT=50]-->
     <string name="player_guessing_animal">Então, qual animal eu estou pensando?</string>
 
+    <!-- Texto para ser exibido no placar (Modo Versus apenas) [CHAR LIMIT=30]-->
+    <string name="versus_mode_score">"""Jogador [ %1$d ] X [ %2$d ] Comp. """</string>
 </resources>

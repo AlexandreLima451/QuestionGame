@@ -20,6 +20,7 @@ class AnimalOptionListActivity : AppCompatActivity() {
 
     val animalMutableList = mutableListOf<AnimalItem>()
     private var animalAdapter : AnimalItemAdapter? = null
+    private var originActivity : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,6 +94,8 @@ class AnimalOptionListActivity : AppCompatActivity() {
         btn_back.setOnClickListener{
             returnMatch()
         }
+
+        originActivity = intent.getSerializableExtra("ORIGIN") as String
     }
 
     override fun onBackPressed() {
@@ -104,7 +107,12 @@ class AnimalOptionListActivity : AppCompatActivity() {
      * This method returns to match with the answer chosen by the player
      */
     private fun returnMatchWithFinalResult(result : ResultModel){
-        val intent = Intent(this, MachineMatchActivity::class.java)
+        val intent : Intent
+        if(originActivity == "MachineMatch"){
+            intent = Intent(this, MachineMatchActivity::class.java)
+        } else{
+            intent = Intent(this, VersusMatchActivity::class.java)
+        }
         intent.putExtra("FINAL_RESULT", result)
         setResult(Activity.RESULT_OK, intent)
         finish()
@@ -129,7 +137,7 @@ class AnimalOptionListActivity : AppCompatActivity() {
         when(animal.breed){
             "lion" -> return applicationContext.getString(R.string.player_answer_lion)
             "horse" -> return applicationContext.getString(R.string.player_answer_horse)
-            "ostrich" -> return applicationContext.getString(R.string.player_answer_ostrich)
+            //"ostrich" -> return applicationContext.getString(R.string.player_answer_ostrich)
             "penguin" -> return applicationContext.getString(R.string.player_answer_penguin)
             "duck" -> return applicationContext.getString(R.string.player_answer_duck)
             "turtle" -> return applicationContext.getString(R.string.player_answer_turtle)

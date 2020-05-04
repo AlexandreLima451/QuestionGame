@@ -10,7 +10,16 @@ import kotlin.random.Random
 /**
  * This class handles with the machine match's logic
  */
-class MachineMatch (context: Context) {
+class MachineMatch private constructor (context: Context) : Match{
+
+    companion object{
+        private val INSTANCE : MachineMatch? = null
+
+        fun getInstance(context : Context) : MachineMatch{
+            if(INSTANCE == null) return MachineMatch(context)
+            else return INSTANCE
+        }
+    }
 
     private var questions : MutableList<QuestionModel> = mutableListOf()
     var chosenAnimal = Animals.none
@@ -20,7 +29,7 @@ class MachineMatch (context: Context) {
     /**
      * This method initializes the match
      * */
-    fun init(){
+    override fun init(){
         chosenAnimal = Animals.randomAnimal()
         questions = loadQuestions()
         isMatchRunning = true
@@ -130,7 +139,7 @@ class MachineMatch (context: Context) {
      * @param result is the answer chosen by the player
      * @return result's message
      */
-    fun finish(result : ResultModel?) : String {
+    override fun finish(result : ResultModel) : String {
         val finalText=  validateAnswer(result)
         questions.clear()
         isMatchRunning = false
@@ -169,7 +178,7 @@ class MachineMatch (context: Context) {
         when(animal.breed){
             "lion" -> return applicationContext.getString(R.string.match_positive_lion)
             "horse" -> return applicationContext.getString(R.string.match_positive_horse)
-            "ostrich" -> return applicationContext.getString(R.string.match_positive_ostrich)
+            //"ostrich" -> return applicationContext.getString(R.string.match_positive_ostrich)
             "penguin" -> return applicationContext.getString(R.string.match_positive_penguin)
             "duck" -> return applicationContext.getString(R.string.match_positive_duck)
             "turtle" -> return applicationContext.getString(R.string.match_positive_turtle)
@@ -193,7 +202,7 @@ class MachineMatch (context: Context) {
         when(animal.breed){
             "lion" -> return applicationContext.getString(R.string.match_negative_lion)
             "horse" -> return applicationContext.getString(R.string.match_negative_horse)
-            "ostrich" -> return applicationContext.getString(R.string.match_negative_ostrich)
+            //"ostrich" -> return applicationContext.getString(R.string.match_negative_ostrich)
             "penguin" -> return applicationContext.getString(R.string.match_negative_penguin)
             "duck" -> return applicationContext.getString(R.string.match_negative_duck)
             "turtle" -> return applicationContext.getString(R.string.match_negative_turtle)
@@ -230,8 +239,12 @@ class MachineMatch (context: Context) {
      * This method gets the status of the match
      * @return true if the match still running
      */
-    fun getIsMatchRunning() : Boolean{
+    private fun getIsMatchRunning() : Boolean{
         return isMatchRunning
+    }
+
+    override fun isRunning(): Boolean {
+        return getIsMatchRunning()
     }
 }
 

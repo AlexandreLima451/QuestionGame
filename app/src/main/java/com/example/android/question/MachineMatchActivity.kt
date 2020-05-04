@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.example.android.question.model.*
+import com.example.android.question.model.domain.Animals
 import com.example.android.question.model.list.adapter.MessageAdapter
 import com.example.android.question.model.list.adapter.QuestionAdapter
 import com.example.android.question.model.list.adapter.AdapterListener
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_machine_match.txt_dialog
 
 class MachineMatchActivity : AppCompatActivity() {
 
-    private var machineMatch = MachineMatch(this)
+    private var machineMatch = MachineMatch.getInstance(this)
     private var messageMutableList = mutableListOf<Message>()
     private var messageAdapter : MessageAdapter? = null
     private var questionAdapter : QuestionAdapter? = null
@@ -47,7 +48,7 @@ class MachineMatchActivity : AppCompatActivity() {
                 questionAdapter?.notifyItemRemoved(position)
                 questionAdapter?.notifyItemRangeChanged(position, machineMatch.getQuantityOfQuestions())
 
-                rel_lyt_ask_player.visibility = View.VISIBLE
+                rel_lyt_player_options.visibility = View.VISIBLE
                 question_list.visibility = View.INVISIBLE
             }
         })
@@ -63,7 +64,7 @@ class MachineMatchActivity : AppCompatActivity() {
 
         btn_ask_question.setOnClickListener{
             if(machineMatch.getQuantityOfQuestions() > 0){
-                rel_lyt_ask_player.visibility = View.INVISIBLE
+                rel_lyt_player_options.visibility = View.INVISIBLE
                 question_list.visibility = View.VISIBLE
             }else{
                 showPlayer1Text(machineMatch.answerQuestion(QuestionModel("noQuestion", "")))
@@ -86,9 +87,11 @@ class MachineMatchActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        val resultModel = data?.getSerializableExtra("FINAL_RESULT") as ResultModel
-        showPlayer2Text(resultModel.resultText)
-        finishGame(resultModel)
+        val resultModel = data!!.getSerializableExtra("FINAL_RESULT") as ResultModel
+        if(!resultModel.animal.equals(Animals.none)){
+            showPlayer2Text(resultModel.resultText)
+            finishGame(resultModel)
+        }
     }
 
     /**Method that scrolls to the last message*/
@@ -132,13 +135,14 @@ class MachineMatchActivity : AppCompatActivity() {
      */
     private fun showValidAnswer(){
         val intent = Intent(applicationContext, AnimalOptionListActivity::class.java)
+        intent.putExtra("ORIGIN", "MachineMatch")
         startActivityForResult(intent, 0x9988)
     }
 
     /**
      * This method finishes the game
      */
-    private fun finishGame(result : ResultModel?){
+    private fun finishGame(result : ResultModel){
         showPlayer1Text(machineMatch.finish(result))
 
         btn_ask_question.visibility = View.INVISIBLE

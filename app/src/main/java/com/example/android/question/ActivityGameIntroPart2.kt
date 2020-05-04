@@ -59,7 +59,7 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
         btn_start_quiz.setOnClickListener {
             if (matchType == this.PLAYER_GUESSING) startPlayerMatch()
             if (matchType == this.MACHINE_GUESSING) startMachineMatch()
-            if (matchType == this.VERSUS_MODE) startMachineMatch()
+            if (matchType == this.VERSUS_MODE) startVersusMatch()
         }
 
         btn_previous.setOnClickListener {
@@ -68,7 +68,8 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
     }
 
     /**
-     * This method starts a new match (Player Guessing)
+     * This method starts a new m
+     * atch (Player Guessing)
      */
     private fun startPlayerMatch(){
         val intent = Intent(this, PlayerMatchActivity::class.java)
@@ -81,6 +82,15 @@ class ActivityGameIntroPart2 : AppCompatActivity() {
      */
     private fun startMachineMatch(){
         val intent = Intent(this, MachineMatchActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    /**
+     * This method starts a new match (Versus Mode)
+     */
+    private fun startVersusMatch(){
+        val intent = Intent(this, VersusMatchActivity::class.java)
         startActivity(intent)
         finish()
     }

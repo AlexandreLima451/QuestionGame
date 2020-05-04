@@ -9,7 +9,16 @@ import java.util.*
 /**
  * This class handles with the player match's logic
  */
-class PlayerMatch(context: Context) {
+class PlayerMatch private constructor(context: Context) : Match{
+
+    companion object{
+        private var INSTANCE : PlayerMatch? = null
+
+        fun getInstance(context : Context) : PlayerMatch{
+            if(INSTANCE == null) return PlayerMatch(context)
+            else return INSTANCE as PlayerMatch
+        }
+    }
 
     private val applicationContext = context
     var currentQuestion = Questions.noQuestion
@@ -20,10 +29,12 @@ class PlayerMatch(context: Context) {
     private var isMatchRunning = false
     private var totalQuestions = 0
 
+
+
     /**
      * This method initializes the match
      * */
-    fun init(){
+    override fun init(){
         questions = Questions.loadMainQuestions()
         totalQuestions = Questions.loadAllQuestions().size
         results = loadResults()
@@ -31,6 +42,10 @@ class PlayerMatch(context: Context) {
         currentAnswer = false
         finalResult = ResultModel(Animals.none, "")
         isMatchRunning = true
+    }
+
+    override fun isRunning(): Boolean {
+        return getIsMatchRunning()
     }
 
     /**
@@ -42,7 +57,7 @@ class PlayerMatch(context: Context) {
         return mutableMapOf(
                 "LION"    to ResultModel(Animals.lion, applicationContext.resources.getString(R.string.answer_lion)),
                 "HORSE"    to ResultModel(Animals.horse, applicationContext.resources.getString(R.string.answer_horse)),
-                "OSTRICH"    to ResultModel(Animals.ostrich, applicationContext.resources.getString(R.string.answer_ostrich)),
+                //"OSTRICH"    to ResultModel(Animals.ostrich, applicationContext.resources.getString(R.string.answer_ostrich)),
                 "PENGUIN"    to ResultModel(Animals.penguin, applicationContext.resources.getString(R.string.answer_penguin)),
                 "DUCK"    to ResultModel(Animals.duck, applicationContext.resources.getString(R.string.answer_duck)),
                 "TURTLE"    to ResultModel(Animals.turtle, applicationContext.resources.getString(R.string.answer_turtle)),
@@ -90,19 +105,25 @@ class PlayerMatch(context: Context) {
         }
     }
 
-    /**
-     * This method finishes the current match
-     * @return result's message
-     * */
-    fun finish() : String{
-        if (finalResult.animal.breed == "none"){ finalResult = ResultModel(Animals.none,
+    override fun finish(result : ResultModel) : String{
+        var resultMatch = result
+        if (resultMatch.animal.breed == "none"){ resultMatch = ResultModel(Animals.none,
                 applicationContext.resources.getString(R.string.answer_none)) }
-        val finalText = finalResult.resultText
+        val finalText = resultMatch.resultText
         questions.clear()
         totalQuestions = 0
         results.clear()
         isMatchRunning = false
+
         return finalText
+    }
+
+    /**
+     * This method finishes the current match
+     * @return result's message
+     * */
+    fun finishMatch() : String{
+        return finish(finalResult)
     }
 
     /**
@@ -120,7 +141,7 @@ class PlayerMatch(context: Context) {
             if (currentQuestion.title != "flying" && currentQuestion.title != "fins") {
                 questions = Questions.loadSecondaryQuestions()
             } else {
-                finish()
+                finish(finalResult)
                 return false
             }
         }
@@ -157,7 +178,7 @@ class PlayerMatch(context: Context) {
      * This method gets the status of the match
      * @return true if the match still running
      */
-    fun getIsMatchRunning() : Boolean{
+    private fun getIsMatchRunning() : Boolean{
         return isMatchRunning
     }
 

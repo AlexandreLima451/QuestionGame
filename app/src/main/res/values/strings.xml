@@ -419,4 +419,6 @@
     <!-- Text when the player have to choose which animal the machine is thinking [CHAR LIMIT=50]-->
     <string name="player_guessing_animal">So, which animal am I thinking?</string>
 
+    <!-- Text that will be showed on the score (Versus Mode only) [CHAR LIMIT=30]-->
+    <string name="versus_mode_score">"""Player [ %1$d ] X [ %2$d ] Computer """</string>
 </resources>

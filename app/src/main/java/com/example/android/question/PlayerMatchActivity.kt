@@ -15,7 +15,7 @@ import com.example.android.question.model.list.adapter.MessageAdapter
 
 class PlayerMatchActivity : AppCompatActivity() {
 
-    private var match = PlayerMatch(this)
+    private var match = PlayerMatch.getInstance(this)
     private var messageMutableList = mutableListOf<Message>()
     private var messageAdapter : MessageAdapter? = null
     private var player1Description = ""
@@ -127,7 +127,7 @@ class PlayerMatchActivity : AppCompatActivity() {
      */
     private fun finishGame(){
         //txt_dialog.text = match.finish()
-        showPlayer1Text(match.finish())
+        showPlayer1Text(match.finishMatch())
 
         btn_yes.visibility = View.INVISIBLE
         btn_no.visibility = View.INVISIBLE

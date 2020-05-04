@@ -9,8 +9,8 @@ abstract class Animals {
                 isHerbivore = false, isFlying = false, hasFins = false)
         val horse = Animal(breed = "horse", isMammal = true, isQuadruped = true, isCarnivore = false,
                 isHerbivore = true, isFlying = false, hasFins = false)
-        val ostrich = Animal(breed = "ostrich", isMammal = false, isQuadruped = false, isCarnivore = true,
-                isHerbivore = true, isFlying = false, hasFins = false)
+        /*val ostrich = Animal(breed = "ostrich", isMammal = false, isQuadruped = false, isCarnivore = true,
+                isHerbivore = true, isFlying = false, hasFins = false)*/
         val penguin = Animal(breed = "penguin", isMammal = false, isQuadruped = false, isCarnivore = true,
                 isHerbivore = false, isFlying = false, hasFins = true)
         val duck = Animal(breed = "duck", isMammal = false, isQuadruped = false, isCarnivore = false,
@@ -38,17 +38,17 @@ abstract class Animals {
             val animals = mutableMapOf<Int, Animal>()
             animals[0] = lion
             animals[1] = horse
-            animals[3] = ostrich
-            animals[4] = penguin
-            animals[5] = duck
-            animals[6] = turtle
-            animals[7] = crocodile
-            animals[8] = whale
-            animals[9] = human
-            animals[10] = bat
-            animals[11] = monkey
+            animals[3] = penguin
+            animals[4] = duck
+            animals[5] = turtle
+            animals[6] = crocodile
+            animals[7] = whale
+            animals[8] = human
+            animals[9] = bat
+            animals[10] = monkey
             animals[12] = snake
             animals[13] = eagle
+            //animals[13] = ostrich
 
             return animals
         }

@@ -10,9 +10,8 @@
         android:roundIcon="@mipmap/sc_happy"
         android:supportsRtl="true"
         android:theme="@style/ConsoleTheme">
-
+        <activity android:name=".VersusMatchActivity" />
         <!-- android:theme="@style/AppTheme"> -->
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +38,7 @@
         <activity
             android:name=".MachineMatchActivity"
             android:theme="@style/ConsoleTheme" />
-        <activity android:name=".AnimalOptionListActivity"></activity>
+        <activity android:name=".AnimalOptionListActivity" />
     </application>
 
 </manifest>
